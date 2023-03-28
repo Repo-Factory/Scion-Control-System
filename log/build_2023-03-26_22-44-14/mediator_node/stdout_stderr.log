@@ -1,8 +1,0 @@
-CMake Error at CMakeLists.txt:24 (ament_target_dependencies):
-  Unknown CMake command "ament_target_dependencies".
-
-
--- Configuring incomplete, errors occurred!
-See also "/home/conner/codePractice/rosDummy/build/mediator_node/CMakeFiles/CMakeOutput.log".
-See also "/home/conner/codePractice/rosDummy/build/mediator_node/CMakeFiles/CMakeError.log".
-make: *** [Makefile:222: cmake_check_build_system] Error 1

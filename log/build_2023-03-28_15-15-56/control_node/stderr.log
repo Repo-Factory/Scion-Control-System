@@ -1,9 +1,0 @@
-[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:[m[K In member function ‘[01m[Kvoid Controller::PIDActionClient::cancel_goal()[m[K’:
-[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:65:10:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kcancel_goal_options[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
-   65 |     auto [01;35m[Kcancel_goal_options[m[K = rclcpp_action::Client<PID>::CancelRequest();
-      |          [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
-[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:[m[K In member function ‘[01m[Kvoid Controller::PIDActionClient::feedback_callback(rclcpp_action::ClientGoalHandle<robot_types::action::PID>::SharedPtr, std::shared_ptr<const robot_types::action::PID_Feedback_<std::allocator<void> > >)[m[K’:
-[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:90:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
-   90 | PID::SharedPtr, [01;35m[Kconst std::shared_ptr<const PID::Feedback> feedback[m[K
-      |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
-

@@ -1,1 +1,0 @@
-Invoking command in '/home/conner/codePractice/rosDummy/build/control_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/conner/codePractice/rosDummy/src/control_node -DCMAKE_INSTALL_PREFIX=/home/conner/codePractice/rosDummy/install/control_node

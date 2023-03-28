@@ -1,3 +1,0 @@
-[35m[1mScanning dependencies of target action_server[0m
-[ 50%] Built target pid_action_server
-[ 75%] [32mBuilding CXX object CMakeFiles/action_server.dir/src/mediator_node.cpp.o[0m

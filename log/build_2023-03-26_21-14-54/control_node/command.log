@@ -1,4 +1,0 @@
-Invoking command in '/home/conner/codePractice/rosDummy/build/control_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/control_node -- -j8 -l8
-Invoked command in '/home/conner/codePractice/rosDummy/build/control_node' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/control_node -- -j8 -l8
-Invoking command in '/home/conner/codePractice/rosDummy/build/control_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/conner/codePractice/rosDummy/build/control_node
-Invoked command in '/home/conner/codePractice/rosDummy/build/control_node' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/conner/codePractice/rosDummy/build/control_node
