@@ -1,0 +1,1 @@
+Invoking command in '/home/conner/codePractice/rosDummy/build/mediator_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/conner/codePractice/rosDummy/src/mediator_node -DCMAKE_INSTALL_PREFIX=/home/conner/codePractice/rosDummy/install/mediator_node

@@ -1,0 +1,25 @@
+[35m[1mScanning dependencies of target action_server[0m
+[ 50%] Built target pid_action_server
+[ 75%] [32mBuilding CXX object CMakeFiles/action_server.dir/src/mediator_node.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libaction_server.so[0m
+[100%] Built target action_server
+-- Install configuration: ""
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/lib/mediator_node/pid_action_server
+-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/lib/libaction_server.so
+-- Set runtime path of "/home/conner/codePractice/rosDummy/install/mediator_node/lib/libaction_server.so" to ""
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/package_run_dependencies/mediator_node
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/parent_prefix_path/mediator_node
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/ament_prefix_path.sh
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/path.sh
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/path.dsv
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.bash
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.sh
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.zsh
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.dsv
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/package.dsv
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/packages/mediator_node
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/rclcpp_components/mediator_node
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/cmake/mediator_nodeConfig.cmake
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/cmake/mediator_nodeConfig-version.cmake
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/package.xml

@@ -1,0 +1,404 @@
+[0.000000] (-) TimerEvent: {}
+[0.002360] (brain_node) JobQueued: {'identifier': 'brain_node', 'dependencies': OrderedDict()}
+[0.002449] (control_node) JobQueued: {'identifier': 'control_node', 'dependencies': OrderedDict()}
+[0.002480] (mediator_node) JobQueued: {'identifier': 'mediator_node', 'dependencies': OrderedDict()}
+[0.002500] (robot_types) JobQueued: {'identifier': 'robot_types', 'dependencies': OrderedDict()}
+[0.002517] (brain_node) JobStarted: {'identifier': 'brain_node'}
+[0.049528] (control_node) JobStarted: {'identifier': 'control_node'}
+[0.078418] (mediator_node) JobStarted: {'identifier': 'mediator_node'}
+[0.097744] (robot_types) JobStarted: {'identifier': 'robot_types'}
+[0.100028] (-) TimerEvent: {}
+[0.127265] (brain_node) JobProgress: {'identifier': 'brain_node', 'progress': 'cmake'}
+[0.128749] (brain_node) Command: {'cmd': ['/usr/bin/cmake', '/home/conner/codePractice/rosDummy/src/brain_node', '-DCMAKE_INSTALL_PREFIX=/home/conner/codePractice/rosDummy/install/brain_node'], 'cwd': '/home/conner/codePractice/rosDummy/build/brain_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'conner'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/conner'), ('OLDPWD', '/home/conner/codePractice/rosDummy/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'conner'), ('NAME', 'ConnerSurface'), ('WSL_INTEROP', '/run/WSL/4206_interop'), ('PULSE_SERVER', '/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/conner/apps/nvm:/mnt/c/conner/apps/nvm:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Silverfrost/FTN95:/mnt/c/conner/apps/Python/Python310/Scripts/:/mnt/c/conner/apps/Python/Python310/:/mnt/c/Users/conne/AppData/Local/Microsoft/WindowsApps:/mnt/c/conner/apps/vscode/bin:/mnt/c/Conner/Apps/nvm/v16.17.0:/mnt/c/Conner/Apps/nvm:/mnt/c/Users/conne/AppData/Roaming/TinyTeX/bin/win32:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/conner/codePractice/rosDummy/build/brain_node'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.148784] (control_node) JobProgress: {'identifier': 'control_node', 'progress': 'cmake'}
+[0.153210] (control_node) Command: {'cmd': ['/usr/bin/cmake', '/home/conner/codePractice/rosDummy/src/control_node', '-DCMAKE_INSTALL_PREFIX=/home/conner/codePractice/rosDummy/install/control_node'], 'cwd': '/home/conner/codePractice/rosDummy/build/control_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'conner'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/conner'), ('OLDPWD', '/home/conner/codePractice/rosDummy/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'conner'), ('NAME', 'ConnerSurface'), ('WSL_INTEROP', '/run/WSL/4206_interop'), ('PULSE_SERVER', '/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/conner/apps/nvm:/mnt/c/conner/apps/nvm:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Silverfrost/FTN95:/mnt/c/conner/apps/Python/Python310/Scripts/:/mnt/c/conner/apps/Python/Python310/:/mnt/c/Users/conne/AppData/Local/Microsoft/WindowsApps:/mnt/c/conner/apps/vscode/bin:/mnt/c/Conner/Apps/nvm/v16.17.0:/mnt/c/Conner/Apps/nvm:/mnt/c/Users/conne/AppData/Roaming/TinyTeX/bin/win32:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/conner/codePractice/rosDummy/build/control_node'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.166674] (mediator_node) JobProgress: {'identifier': 'mediator_node', 'progress': 'cmake'}
+[0.166860] (mediator_node) Command: {'cmd': ['/usr/bin/cmake', '/home/conner/codePractice/rosDummy/src/mediator_node', '-DCMAKE_INSTALL_PREFIX=/home/conner/codePractice/rosDummy/install/mediator_node'], 'cwd': '/home/conner/codePractice/rosDummy/build/mediator_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'conner'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/conner'), ('OLDPWD', '/home/conner/codePractice/rosDummy/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'conner'), ('NAME', 'ConnerSurface'), ('WSL_INTEROP', '/run/WSL/4206_interop'), ('PULSE_SERVER', '/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/conner/apps/nvm:/mnt/c/conner/apps/nvm:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Silverfrost/FTN95:/mnt/c/conner/apps/Python/Python310/Scripts/:/mnt/c/conner/apps/Python/Python310/:/mnt/c/Users/conne/AppData/Local/Microsoft/WindowsApps:/mnt/c/conner/apps/vscode/bin:/mnt/c/Conner/Apps/nvm/v16.17.0:/mnt/c/Conner/Apps/nvm:/mnt/c/Users/conne/AppData/Roaming/TinyTeX/bin/win32:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/conner/codePractice/rosDummy/build/mediator_node'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.177180] (robot_types) JobProgress: {'identifier': 'robot_types', 'progress': 'cmake'}
+[0.178835] (robot_types) Command: {'cmd': ['/usr/bin/cmake', '/home/conner/codePractice/rosDummy/src/robot_types', '-DCMAKE_INSTALL_PREFIX=/home/conner/codePractice/rosDummy/install/robot_types'], 'cwd': '/home/conner/codePractice/rosDummy/build/robot_types', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'conner'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/conner'), ('OLDPWD', '/home/conner/codePractice/rosDummy/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'conner'), ('NAME', 'ConnerSurface'), ('WSL_INTEROP', '/run/WSL/4206_interop'), ('PULSE_SERVER', '/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/conner/apps/nvm:/mnt/c/conner/apps/nvm:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Silverfrost/FTN95:/mnt/c/conner/apps/Python/Python310/Scripts/:/mnt/c/conner/apps/Python/Python310/:/mnt/c/Users/conne/AppData/Local/Microsoft/WindowsApps:/mnt/c/conner/apps/vscode/bin:/mnt/c/Conner/Apps/nvm/v16.17.0:/mnt/c/Conner/Apps/nvm:/mnt/c/Users/conne/AppData/Roaming/TinyTeX/bin/win32:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/conner/codePractice/rosDummy/build/robot_types'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.201786] (-) TimerEvent: {}
+[0.304148] (-) TimerEvent: {}
+[0.404958] (-) TimerEvent: {}
+[0.505628] (-) TimerEvent: {}
+[0.606467] (-) TimerEvent: {}
+[0.707141] (-) TimerEvent: {}
+[0.807647] (-) TimerEvent: {}
+[0.908237] (-) TimerEvent: {}
+[1.009106] (-) TimerEvent: {}
+[1.109874] (-) TimerEvent: {}
+[1.210503] (-) TimerEvent: {}
+[1.311255] (-) TimerEvent: {}
+[1.411899] (-) TimerEvent: {}
+[1.512517] (-) TimerEvent: {}
+[1.613148] (-) TimerEvent: {}
+[1.713892] (-) TimerEvent: {}
+[1.814903] (-) TimerEvent: {}
+[1.886010] (brain_node) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[1.886499] (mediator_node) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[1.890408] (robot_types) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[1.890848] (control_node) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[1.915154] (-) TimerEvent: {}
+[2.015896] (-) TimerEvent: {}
+[2.116609] (-) TimerEvent: {}
+[2.217328] (-) TimerEvent: {}
+[2.318106] (-) TimerEvent: {}
+[2.419207] (-) TimerEvent: {}
+[2.520443] (-) TimerEvent: {}
+[2.621130] (-) TimerEvent: {}
+[2.721903] (-) TimerEvent: {}
+[2.823785] (-) TimerEvent: {}
+[2.874863] (control_node) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[2.879584] (robot_types) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[2.881167] (mediator_node) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[2.884619] (brain_node) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[2.924006] (-) TimerEvent: {}
+[3.024686] (-) TimerEvent: {}
+[3.125464] (-) TimerEvent: {}
+[3.226285] (-) TimerEvent: {}
+[3.239098] (mediator_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[3.239687] (control_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[3.240107] (robot_types) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[3.243662] (brain_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[3.326485] (-) TimerEvent: {}
+[3.427238] (-) TimerEvent: {}
+[3.528127] (-) TimerEvent: {}
+[3.630301] (-) TimerEvent: {}
+[3.732041] (-) TimerEvent: {}
+[3.774486] (control_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[3.780600] (robot_types) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[3.783353] (control_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.784434] (robot_types) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.803713] (mediator_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[3.807314] (mediator_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.832293] (-) TimerEvent: {}
+[3.923527] (brain_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[3.926791] (brain_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.932631] (-) TimerEvent: {}
+[4.033233] (-) TimerEvent: {}
+[4.133900] (-) TimerEvent: {}
+[4.214868] (control_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.225818] (robot_types) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.234101] (-) TimerEvent: {}
+[4.248647] (control_node) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.250808] (control_node) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.255298] (robot_types) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.256261] (robot_types) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.262662] (control_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[4.263954] (robot_types) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[4.334345] (-) TimerEvent: {}
+[4.337274] (mediator_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.373467] (mediator_node) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.374608] (mediator_node) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.380520] (mediator_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[4.430519] (brain_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.434600] (-) TimerEvent: {}
+[4.479584] (brain_node) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.481231] (brain_node) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.487909] (brain_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[4.534843] (-) TimerEvent: {}
+[4.635605] (-) TimerEvent: {}
+[4.736519] (-) TimerEvent: {}
+[4.760355] (control_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[4.762923] (control_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.764203] (robot_types) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[4.768947] (robot_types) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.836697] (-) TimerEvent: {}
+[4.937545] (-) TimerEvent: {}
+[4.953640] (mediator_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[4.956002] (mediator_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.037790] (-) TimerEvent: {}
+[5.075890] (brain_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[5.080011] (brain_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.138055] (-) TimerEvent: {}
+[5.235083] (robot_types) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.238267] (-) TimerEvent: {}
+[5.245327] (control_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.280802] (robot_types) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.282312] (control_node) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.282900] (robot_types) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.283764] (control_node) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.331547] (robot_types) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[5.332225] (control_node) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[5.338595] (-) TimerEvent: {}
+[5.439401] (-) TimerEvent: {}
+[5.442421] (control_node) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[5.442872] (control_node) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.443201] (robot_types) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[5.443804] (robot_types) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.525968] (mediator_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.539609] (-) TimerEvent: {}
+[5.557775] (mediator_node) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.560794] (mediator_node) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.565775] (mediator_node) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[5.629969] (mediator_node) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[5.630360] (mediator_node) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.639843] (-) TimerEvent: {}
+[5.683764] (brain_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.724167] (brain_node) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.725754] (brain_node) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.729905] (brain_node) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[5.740143] (-) TimerEvent: {}
+[5.786084] (brain_node) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[5.786928] (brain_node) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.840358] (-) TimerEvent: {}
+[5.941089] (-) TimerEvent: {}
+[6.041734] (-) TimerEvent: {}
+[6.121641] (robot_types) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[6.125580] (control_node) StdoutLine: {'line': b'-- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[6.126018] (mediator_node) StdoutLine: {'line': b'-- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[6.142140] (-) TimerEvent: {}
+[6.154478] (robot_types) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.199164] (robot_types) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[6.242359] (-) TimerEvent: {}
+[6.301848] (brain_node) StdoutLine: {'line': b'-- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[6.342637] (-) TimerEvent: {}
+[6.443352] (-) TimerEvent: {}
+[6.544742] (-) TimerEvent: {}
+[6.647356] (-) TimerEvent: {}
+[6.751251] (-) TimerEvent: {}
+[6.788964] (mediator_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.811058] (mediator_node) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[6.833571] (control_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.851629] (-) TimerEvent: {}
+[6.853065] (control_node) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[6.951179] (brain_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.951825] (-) TimerEvent: {}
+[6.967063] (brain_node) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[7.052049] (-) TimerEvent: {}
+[7.152870] (-) TimerEvent: {}
+[7.253645] (-) TimerEvent: {}
+[7.354386] (-) TimerEvent: {}
+[7.455123] (-) TimerEvent: {}
+[7.555925] (-) TimerEvent: {}
+[7.656652] (-) TimerEvent: {}
+[7.757422] (-) TimerEvent: {}
+[7.858115] (-) TimerEvent: {}
+[7.958837] (-) TimerEvent: {}
+[8.059899] (-) TimerEvent: {}
+[8.160925] (-) TimerEvent: {}
+[8.261787] (-) TimerEvent: {}
+[8.362698] (-) TimerEvent: {}
+[8.463387] (-) TimerEvent: {}
+[8.564118] (-) TimerEvent: {}
+[8.664725] (-) TimerEvent: {}
+[8.766162] (-) TimerEvent: {}
+[8.866830] (-) TimerEvent: {}
+[8.967546] (-) TimerEvent: {}
+[9.069379] (-) TimerEvent: {}
+[9.170247] (-) TimerEvent: {}
+[9.254671] (mediator_node) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[9.255661] (robot_types) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[9.270458] (-) TimerEvent: {}
+[9.371223] (-) TimerEvent: {}
+[9.471931] (-) TimerEvent: {}
+[9.572742] (-) TimerEvent: {}
+[9.673542] (-) TimerEvent: {}
+[9.774217] (-) TimerEvent: {}
+[9.875002] (-) TimerEvent: {}
+[9.976246] (-) TimerEvent: {}
+[10.078074] (-) TimerEvent: {}
+[10.152698] (control_node) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[10.178322] (-) TimerEvent: {}
+[10.279076] (-) TimerEvent: {}
+[10.331537] (brain_node) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[10.379580] (-) TimerEvent: {}
+[10.481237] (-) TimerEvent: {}
+[10.582326] (-) TimerEvent: {}
+[10.683185] (-) TimerEvent: {}
+[10.783898] (-) TimerEvent: {}
+[10.884602] (-) TimerEvent: {}
+[10.985264] (-) TimerEvent: {}
+[11.085923] (-) TimerEvent: {}
+[11.186706] (-) TimerEvent: {}
+[11.287615] (-) TimerEvent: {}
+[11.388538] (-) TimerEvent: {}
+[11.489544] (-) TimerEvent: {}
+[11.590603] (-) TimerEvent: {}
+[11.621907] (robot_types) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[11.625157] (mediator_node) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[11.690869] (-) TimerEvent: {}
+[11.791566] (-) TimerEvent: {}
+[11.892240] (-) TimerEvent: {}
+[11.992883] (-) TimerEvent: {}
+[12.093620] (-) TimerEvent: {}
+[12.194460] (-) TimerEvent: {}
+[12.295557] (-) TimerEvent: {}
+[12.396343] (-) TimerEvent: {}
+[12.497076] (-) TimerEvent: {}
+[12.597774] (-) TimerEvent: {}
+[12.698429] (-) TimerEvent: {}
+[12.799188] (-) TimerEvent: {}
+[12.900027] (-) TimerEvent: {}
+[13.003716] (-) TimerEvent: {}
+[13.104325] (-) TimerEvent: {}
+[13.206875] (-) TimerEvent: {}
+[13.307572] (-) TimerEvent: {}
+[13.408566] (-) TimerEvent: {}
+[13.512810] (-) TimerEvent: {}
+[13.613855] (-) TimerEvent: {}
+[13.715139] (-) TimerEvent: {}
+[13.816429] (-) TimerEvent: {}
+[13.919225] (-) TimerEvent: {}
+[13.957773] (control_node) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[14.019868] (-) TimerEvent: {}
+[14.104063] (brain_node) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[14.120697] (-) TimerEvent: {}
+[14.227136] (-) TimerEvent: {}
+[14.331631] (-) TimerEvent: {}
+[14.433948] (-) TimerEvent: {}
+[14.535633] (-) TimerEvent: {}
+[14.636377] (-) TimerEvent: {}
+[14.737293] (-) TimerEvent: {}
+[14.838327] (-) TimerEvent: {}
+[14.939554] (-) TimerEvent: {}
+[15.041377] (-) TimerEvent: {}
+[15.142649] (-) TimerEvent: {}
+[15.243597] (-) TimerEvent: {}
+[15.344341] (-) TimerEvent: {}
+[15.445063] (-) TimerEvent: {}
+[15.545963] (-) TimerEvent: {}
+[15.646877] (-) TimerEvent: {}
+[15.747642] (-) TimerEvent: {}
+[15.848336] (-) TimerEvent: {}
+[15.949511] (-) TimerEvent: {}
+[16.050341] (-) TimerEvent: {}
+[16.151084] (-) TimerEvent: {}
+[16.251922] (-) TimerEvent: {}
+[16.312393] (robot_types) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[16.315087] (mediator_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[16.352148] (-) TimerEvent: {}
+[16.430598] (robot_types) StderrLine: {'line': b'CMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):\n'}
+[16.431204] (robot_types) StderrLine: {'line': b"  rosidl_generate_interfaces() the passed file 'action/Fibonacci.action'\n"}
+[16.431478] (robot_types) StderrLine: {'line': b"  doesn't exist relative to the CMAKE_CURRENT_SOURCE_DIR\n"}
+[16.431704] (robot_types) StderrLine: {'line': b"  '/home/conner/codePractice/rosDummy/src/robot_types'\n"}
+[16.431937] (robot_types) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[16.432155] (robot_types) StderrLine: {'line': b'  CMakeLists.txt:22 (rosidl_generate_interfaces)\n'}
+[16.432337] (robot_types) StderrLine: {'line': b'\n'}
+[16.432513] (robot_types) StderrLine: {'line': b'\n'}
+[16.433186] (robot_types) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[16.433552] (robot_types) StdoutLine: {'line': b'See also "/home/conner/codePractice/rosDummy/build/robot_types/CMakeFiles/CMakeOutput.log".\n'}
+[16.453044] (robot_types) CommandEnded: {'returncode': 1}
+[16.462837] (-) TimerEvent: {}
+[16.566964] (-) TimerEvent: {}
+[16.598739] (mediator_node) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[16.621115] (mediator_node) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[16.628143] (mediator_node) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[16.631630] (robot_types) JobEnded: {'identifier': 'robot_types', 'rc': 1}
+[16.667285] (-) TimerEvent: {}
+[16.768267] (-) TimerEvent: {}
+[16.869178] (-) TimerEvent: {}
+[16.971403] (-) TimerEvent: {}
+[17.072162] (-) TimerEvent: {}
+[17.173030] (-) TimerEvent: {}
+[17.234158] (mediator_node) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[17.235018] (mediator_node) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[17.273291] (-) TimerEvent: {}
+[17.374069] (-) TimerEvent: {}
+[17.474771] (-) TimerEvent: {}
+[17.575620] (-) TimerEvent: {}
+[17.656625] (mediator_node) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[17.657236] (mediator_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[17.675862] (-) TimerEvent: {}
+[17.776645] (-) TimerEvent: {}
+[17.877446] (-) TimerEvent: {}
+[17.978134] (-) TimerEvent: {}
+[18.006070] (mediator_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[18.006725] (mediator_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[18.078325] (-) TimerEvent: {}
+[18.179040] (-) TimerEvent: {}
+[18.279919] (-) TimerEvent: {}
+[18.380540] (-) TimerEvent: {}
+[18.451123] (mediator_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[18.453816] (mediator_node) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[18.480739] (-) TimerEvent: {}
+[18.581392] (-) TimerEvent: {}
+[18.682085] (-) TimerEvent: {}
+[18.782701] (-) TimerEvent: {}
+[18.883559] (-) TimerEvent: {}
+[18.952386] (mediator_node) StdoutLine: {'line': b'-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)\n'}
+[18.983743] (-) TimerEvent: {}
+[19.072133] (mediator_node) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.7 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[19.083906] (-) TimerEvent: {}
+[19.184529] (-) TimerEvent: {}
+[19.285143] (-) TimerEvent: {}
+[19.313289] (mediator_node) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[19.326087] (mediator_node) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[19.336752] (mediator_node) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[19.349329] (mediator_node) StdoutLine: {'line': b'-- Configuring done\n'}
+[19.356564] (mediator_node) StdoutLine: {'line': b'-- Generating done\n'}
+[19.360789] (mediator_node) StdoutLine: {'line': b'-- Build files have been written to: /home/conner/codePractice/rosDummy/build/mediator_node\n'}
+[19.372583] (mediator_node) JobEnded: {'identifier': 'mediator_node', 'rc': 'SIGINT'}
+[19.385442] (-) TimerEvent: {}
+[19.445698] (control_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[19.485632] (-) TimerEvent: {}
+[19.527542] (brain_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[19.552860] (control_node) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[19.556527] (control_node) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[19.557873] (control_node) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[19.585852] (-) TimerEvent: {}
+[19.621488] (brain_node) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[19.624709] (brain_node) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[19.626708] (brain_node) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[19.686073] (-) TimerEvent: {}
+[19.786812] (-) TimerEvent: {}
+[19.887434] (-) TimerEvent: {}
+[19.970637] (control_node) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[19.971240] (control_node) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[19.987639] (-) TimerEvent: {}
+[20.068934] (brain_node) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[20.069685] (brain_node) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[20.087890] (-) TimerEvent: {}
+[20.188832] (-) TimerEvent: {}
+[20.289500] (-) TimerEvent: {}
+[20.390113] (-) TimerEvent: {}
+[20.421806] (control_node) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[20.423084] (control_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[20.490366] (-) TimerEvent: {}
+[20.519850] (brain_node) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[20.520608] (brain_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[20.590602] (-) TimerEvent: {}
+[20.691420] (-) TimerEvent: {}
+[20.792210] (-) TimerEvent: {}
+[20.854042] (control_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[20.855179] (control_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[20.892570] (-) TimerEvent: {}
+[20.950335] (brain_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[20.951674] (brain_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[20.992774] (-) TimerEvent: {}
+[21.093510] (-) TimerEvent: {}
+[21.194247] (-) TimerEvent: {}
+[21.294852] (-) TimerEvent: {}
+[21.300474] (control_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[21.302981] (control_node) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[21.371479] (brain_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[21.373024] (brain_node) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[21.395332] (-) TimerEvent: {}
+[21.495859] (-) TimerEvent: {}
+[21.585437] (control_node) StdoutLine: {'line': b'-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)\n'}
+[21.595983] (-) TimerEvent: {}
+[21.643032] (brain_node) StdoutLine: {'line': b'-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)\n'}
+[21.649075] (control_node) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.7 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[21.696195] (-) TimerEvent: {}
+[21.714773] (brain_node) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.7 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[21.796466] (-) TimerEvent: {}
+[21.897261] (-) TimerEvent: {}
+[21.998063] (-) TimerEvent: {}
+[22.098863] (-) TimerEvent: {}
+[22.199729] (-) TimerEvent: {}
+[22.300399] (-) TimerEvent: {}
+[22.343157] (control_node) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[22.346630] (control_node) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[22.349034] (control_node) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[22.354399] (control_node) StdoutLine: {'line': b'-- Configuring done\n'}
+[22.360427] (control_node) StdoutLine: {'line': b'-- Generating done\n'}
+[22.363436] (control_node) StdoutLine: {'line': b'-- Build files have been written to: /home/conner/codePractice/rosDummy/build/control_node\n'}
+[22.374114] (control_node) JobEnded: {'identifier': 'control_node', 'rc': 'SIGINT'}
+[22.400634] (-) TimerEvent: {}
+[22.443517] (brain_node) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[22.446726] (brain_node) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[22.449124] (brain_node) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[22.454784] (brain_node) StdoutLine: {'line': b'-- Configuring done\n'}
+[22.467234] (brain_node) StdoutLine: {'line': b'-- Generating done\n'}
+[22.471123] (brain_node) StdoutLine: {'line': b'-- Build files have been written to: /home/conner/codePractice/rosDummy/build/brain_node\n'}
+[22.481432] (brain_node) JobEnded: {'identifier': 'brain_node', 'rc': 'SIGINT'}
+[22.495561] (-) EventReactorShutdown: {}

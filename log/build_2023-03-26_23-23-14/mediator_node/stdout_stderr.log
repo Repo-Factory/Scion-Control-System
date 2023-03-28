@@ -1,0 +1,10 @@
+[35m[1mScanning dependencies of target action_server[0m
+[ 50%] Built target pid_action_server
+[ 75%] [32mBuilding CXX object CMakeFiles/action_server.dir/src/mediator_node.cpp.o[0m
+[01m[K/home/conner/codePractice/rosDummy/src/mediator_node/src/mediator_node.cpp:[m[K In member function ‘[01m[Kvoid Mediator::PIDActionServer::execute(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_types::action::PID> >)[m[K’:
+[01m[K/home/conner/codePractice/rosDummy/src/mediator_node/src/mediator_node.cpp:93:7:[m[K [01;31m[Kerror: [m[K‘[01m[KCheck[m[K’ was not declared in this scope
+   93 |       [01;31m[KCheck[m[K if there is a cancel request
+      |       [01;31m[K^~~~~[m[K
+make[2]: *** [CMakeFiles/action_server.dir/build.make:63: CMakeFiles/action_server.dir/src/mediator_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:161: CMakeFiles/action_server.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

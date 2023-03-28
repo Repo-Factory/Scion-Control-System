@@ -1,0 +1,20 @@
+[0.095s] Invoking command in '/home/conner/codePractice/rosDummy/build/mediator_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/mediator_node -- -j8 -l8
+[0.188s] Invoked command in '/home/conner/codePractice/rosDummy/build/mediator_node' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/mediator_node -- -j8 -l8
+[0.261s] Invoking command in '/home/conner/codePractice/rosDummy/build/mediator_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/conner/codePractice/rosDummy/build/mediator_node
+[0.289s] -- Install configuration: ""
+[0.291s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/package_run_dependencies/mediator_node
+[0.292s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/parent_prefix_path/mediator_node
+[0.294s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/ament_prefix_path.sh
+[0.295s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/ament_prefix_path.dsv
+[0.297s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/path.sh
+[0.301s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/path.dsv
+[0.301s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.bash
+[0.302s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.sh
+[0.302s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.zsh
+[0.303s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.dsv
+[0.310s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/package.dsv
+[0.311s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/packages/mediator_node
+[0.311s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/cmake/mediator_nodeConfig.cmake
+[0.312s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/cmake/mediator_nodeConfig-version.cmake
+[0.313s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/package.xml
+[0.402s] Invoked command in '/home/conner/codePractice/rosDummy/build/mediator_node' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/conner/codePractice/rosDummy/build/mediator_node

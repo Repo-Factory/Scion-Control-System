@@ -1,0 +1,33 @@
+[0.574s] Invoking command in '/home/conner/codePractice/rosDummy/build/control_node': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/control_node -- -j8 -l8
+[0.671s] [35m[1mScanning dependencies of target action_client[0m
+[0.705s] [ 50%] Built target PID_action_client
+[0.755s] [ 75%] [32mBuilding CXX object CMakeFiles/action_client.dir/src/control_node.cpp.o[0m
+[3.967s] [01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:[m[K In member function ‘[01m[Kvoid Controller::PIDActionClient::feedback_callback(rclcpp_action::ClientGoalHandle<robot_types::action::PID>::SharedPtr, std::shared_ptr<const robot_types::action::PID_Feedback_<std::allocator<void> > >)[m[K’:
+[3.967s] [01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:77:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.967s]    77 |     [01;35m[Kconst std::shared_ptr<const PID::Feedback> feedback[m[K
+[3.968s]       |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[8.011s] [100%] [32m[1mLinking CXX shared library libaction_client.so[0m
+[8.641s] [100%] Built target action_client
+[8.661s] Invoked command in '/home/conner/codePractice/rosDummy/build/control_node' returned '0': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/control_node -- -j8 -l8
+[8.717s] Invoking command in '/home/conner/codePractice/rosDummy/build/control_node': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy /usr/bin/cmake --install /home/conner/codePractice/rosDummy/build/control_node
+[8.729s] -- Install configuration: ""
+[8.729s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/lib/control_node/PID_action_client
+[8.729s] -- Installing: /home/conner/codePractice/rosDummy/install/control_node/lib/libaction_client.so
+[8.742s] -- Set runtime path of "/home/conner/codePractice/rosDummy/install/control_node/lib/libaction_client.so" to ""
+[8.742s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/ament_index/resource_index/package_run_dependencies/control_node
+[8.743s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/ament_index/resource_index/parent_prefix_path/control_node
+[8.743s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/ament_prefix_path.sh
+[8.743s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/ament_prefix_path.dsv
+[8.744s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/path.sh
+[8.744s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/path.dsv
+[8.744s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.bash
+[8.745s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.sh
+[8.745s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.zsh
+[8.745s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.dsv
+[8.745s] -- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/package.dsv
+[8.746s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/ament_index/resource_index/packages/control_node
+[8.747s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/ament_index/resource_index/rclcpp_components/control_node
+[8.750s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/cmake/control_nodeConfig.cmake
+[8.751s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/cmake/control_nodeConfig-version.cmake
+[8.751s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/package.xml
+[8.757s] Invoked command in '/home/conner/codePractice/rosDummy/build/control_node' returned '0': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy /usr/bin/cmake --install /home/conner/codePractice/rosDummy/build/control_node

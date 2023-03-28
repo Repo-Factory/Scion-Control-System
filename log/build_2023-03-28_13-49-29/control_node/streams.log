@@ -1,0 +1,29 @@
+[0.214s] Invoking command in '/home/conner/codePractice/rosDummy/build/control_node': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/control_node -- -j8 -l8
+[0.288s] [35m[1mScanning dependencies of target action_client[0m
+[0.324s] [ 50%] Built target PID_action_client
+[0.349s] [ 75%] [32mBuilding CXX object CMakeFiles/action_client.dir/src/control_node.cpp.o[0m
+[8.681s] [100%] [32m[1mLinking CXX shared library libaction_client.so[0m
+[9.161s] [100%] Built target action_client
+[9.184s] Invoked command in '/home/conner/codePractice/rosDummy/build/control_node' returned '0': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/control_node -- -j8 -l8
+[9.221s] Invoking command in '/home/conner/codePractice/rosDummy/build/control_node': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy /usr/bin/cmake --install /home/conner/codePractice/rosDummy/build/control_node
+[9.229s] -- Install configuration: ""
+[9.232s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/lib/control_node/PID_action_client
+[9.238s] -- Installing: /home/conner/codePractice/rosDummy/install/control_node/lib/libaction_client.so
+[9.240s] -- Set runtime path of "/home/conner/codePractice/rosDummy/install/control_node/lib/libaction_client.so" to ""
+[9.241s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/ament_index/resource_index/package_run_dependencies/control_node
+[9.241s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/ament_index/resource_index/parent_prefix_path/control_node
+[9.241s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/ament_prefix_path.sh
+[9.241s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/ament_prefix_path.dsv
+[9.241s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/path.sh
+[9.242s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/path.dsv
+[9.242s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.bash
+[9.242s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.sh
+[9.243s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.zsh
+[9.243s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.dsv
+[9.243s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/package.dsv
+[9.243s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/ament_index/resource_index/packages/control_node
+[9.246s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/ament_index/resource_index/rclcpp_components/control_node
+[9.247s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/cmake/control_nodeConfig.cmake
+[9.247s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/cmake/control_nodeConfig-version.cmake
+[9.247s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/package.xml
+[9.271s] Invoked command in '/home/conner/codePractice/rosDummy/build/control_node' returned '0': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy /usr/bin/cmake --install /home/conner/codePractice/rosDummy/build/control_node

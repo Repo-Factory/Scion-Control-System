@@ -1,0 +1,9 @@
+/home/conner/codePractice/rosDummy/build/brain_node/CMakeFiles/install/strip.dir
+/home/conner/codePractice/rosDummy/build/brain_node/CMakeFiles/install/local.dir
+/home/conner/codePractice/rosDummy/build/brain_node/CMakeFiles/install.dir
+/home/conner/codePractice/rosDummy/build/brain_node/CMakeFiles/list_install_components.dir
+/home/conner/codePractice/rosDummy/build/brain_node/CMakeFiles/rebuild_cache.dir
+/home/conner/codePractice/rosDummy/build/brain_node/CMakeFiles/edit_cache.dir
+/home/conner/codePractice/rosDummy/build/brain_node/CMakeFiles/test.dir
+/home/conner/codePractice/rosDummy/build/brain_node/CMakeFiles/brain_node_uninstall.dir
+/home/conner/codePractice/rosDummy/build/brain_node/CMakeFiles/uninstall.dir

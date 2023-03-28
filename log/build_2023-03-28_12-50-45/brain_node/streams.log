@@ -1,0 +1,20 @@
+[0.073s] Invoking command in '/home/conner/codePractice/rosDummy/build/brain_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/brain_node -- -j8 -l8
+[0.209s] Invoked command in '/home/conner/codePractice/rosDummy/build/brain_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/brain_node -- -j8 -l8
+[0.433s] Invoking command in '/home/conner/codePractice/rosDummy/build/brain_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/conner/codePractice/rosDummy/build/brain_node
+[0.466s] -- Install configuration: ""
+[0.468s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/brain_node/share/ament_index/resource_index/package_run_dependencies/brain_node
+[0.469s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/brain_node/share/ament_index/resource_index/parent_prefix_path/brain_node
+[0.470s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/environment/ament_prefix_path.sh
+[0.472s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/environment/ament_prefix_path.dsv
+[0.477s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/environment/path.sh
+[0.482s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/environment/path.dsv
+[0.484s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/local_setup.bash
+[0.487s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/local_setup.sh
+[0.498s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/local_setup.zsh
+[0.511s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/local_setup.dsv
+[0.512s] -- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/package.dsv
+[0.513s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/brain_node/share/ament_index/resource_index/packages/brain_node
+[0.515s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/cmake/brain_nodeConfig.cmake
+[0.518s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/cmake/brain_nodeConfig-version.cmake
+[0.521s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/package.xml
+[0.522s] Invoked command in '/home/conner/codePractice/rosDummy/build/brain_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/conner/codePractice/rosDummy/build/brain_node

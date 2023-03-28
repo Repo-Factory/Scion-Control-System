@@ -1,0 +1,43 @@
+[0.116s] Invoking command in '/home/conner/codePractice/rosDummy/build/control_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/conner/codePractice/rosDummy/src/control_node -DCMAKE_INSTALL_PREFIX=/home/conner/codePractice/rosDummy/install/control_node
+[1.841s] -- The C compiler identification is GNU 9.4.0
+[2.826s] -- The CXX compiler identification is GNU 9.4.0
+[3.190s] -- Check for working C compiler: /usr/bin/cc
+[3.725s] -- Check for working C compiler: /usr/bin/cc -- works
+[3.734s] -- Detecting C compiler ABI info
+[4.165s] -- Detecting C compiler ABI info - done
+[4.199s] -- Detecting C compile features
+[4.201s] -- Detecting C compile features - done
+[4.213s] -- Check for working CXX compiler: /usr/bin/c++
+[4.711s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[4.713s] -- Detecting CXX compiler ABI info
+[5.196s] -- Detecting CXX compiler ABI info - done
+[5.233s] -- Detecting CXX compile features
+[5.234s] -- Detecting CXX compile features - done
+[5.283s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[5.393s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[5.393s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[6.076s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[6.784s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.804s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[10.103s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[13.911s] -- Found FastRTPS: /opt/ros/foxy/include  
+[19.396s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[19.504s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[19.507s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[19.508s] -- Looking for pthread.h
+[19.921s] -- Looking for pthread.h - found
+[19.922s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[20.372s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[20.374s] -- Looking for pthread_create in pthreads
+[20.805s] -- Looking for pthread_create in pthreads - not found
+[20.806s] -- Looking for pthread_create in pthread
+[21.251s] -- Looking for pthread_create in pthread - found
+[21.254s] -- Found Threads: TRUE  
+[21.536s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[21.600s] -- Found ament_lint_auto: 0.9.7 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[22.294s] -- Added test 'copyright' to check source files copyright and LICENSE
+[22.297s] -- Added test 'lint_cmake' to check CMake code style
+[22.300s] -- Added test 'xmllint' to check XML markup files
+[22.305s] -- Configuring done
+[22.311s] -- Generating done
+[22.314s] -- Build files have been written to: /home/conner/codePractice/rosDummy/build/control_node

@@ -1,0 +1,25 @@
+[0.400s] Invoking command in '/home/conner/codePractice/rosDummy/build/mediator_node': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/mediator_node -- -j8 -l8
+[0.532s] [100%] Built target action_server
+[0.532s] [100%] Built target pid_action_server
+[0.557s] Invoked command in '/home/conner/codePractice/rosDummy/build/mediator_node' returned '0': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/mediator_node -- -j8 -l8
+[0.629s] Invoking command in '/home/conner/codePractice/rosDummy/build/mediator_node': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy /usr/bin/cmake --install /home/conner/codePractice/rosDummy/build/mediator_node
+[0.650s] -- Install configuration: ""
+[0.651s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/lib/mediator_node/pid_action_server
+[0.652s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/lib/libaction_server.so
+[0.658s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/package_run_dependencies/mediator_node
+[0.659s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/parent_prefix_path/mediator_node
+[0.660s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/ament_prefix_path.sh
+[0.660s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/ament_prefix_path.dsv
+[0.661s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/path.sh
+[0.661s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/path.dsv
+[0.661s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.bash
+[0.661s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.sh
+[0.661s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.zsh
+[0.662s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.dsv
+[0.664s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/package.dsv
+[0.664s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/packages/mediator_node
+[0.664s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/rclcpp_components/mediator_node
+[0.664s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/cmake/mediator_nodeConfig.cmake
+[0.665s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/cmake/mediator_nodeConfig-version.cmake
+[0.666s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/package.xml
+[0.680s] Invoked command in '/home/conner/codePractice/rosDummy/build/mediator_node' returned '0': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy /usr/bin/cmake --install /home/conner/codePractice/rosDummy/build/mediator_node

@@ -1,0 +1,29 @@
+[35m[1mScanning dependencies of target action_client[0m
+[ 50%] Built target PID_action_client
+[ 75%] [32mBuilding CXX object CMakeFiles/action_client.dir/src/control_node.cpp.o[0m
+[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:[m[K In member function ‘[01m[Kvoid Controller::PIDActionClient::feedback_callback(rclcpp_action::ClientGoalHandle<robot_types::action::PID>::SharedPtr, std::shared_ptr<const robot_types::action::PID_Feedback_<std::allocator<void> > >)[m[K’:
+[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:78:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfeedback[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   78 |     [01;35m[Kconst std::shared_ptr<const PID::Feedback> feedback[m[K
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[100%] [32m[1mLinking CXX shared library libaction_client.so[0m
+[100%] Built target action_client
+-- Install configuration: ""
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/lib/control_node/PID_action_client
+-- Installing: /home/conner/codePractice/rosDummy/install/control_node/lib/libaction_client.so
+-- Set runtime path of "/home/conner/codePractice/rosDummy/install/control_node/lib/libaction_client.so" to ""
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/ament_index/resource_index/package_run_dependencies/control_node
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/ament_index/resource_index/parent_prefix_path/control_node
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/ament_prefix_path.sh
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/path.sh
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/path.dsv
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.bash
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.sh
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.zsh
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.dsv
+-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/package.dsv
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/ament_index/resource_index/packages/control_node
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/ament_index/resource_index/rclcpp_components/control_node
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/cmake/control_nodeConfig.cmake
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/cmake/control_nodeConfig-version.cmake
+-- Up-to-date: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/package.xml

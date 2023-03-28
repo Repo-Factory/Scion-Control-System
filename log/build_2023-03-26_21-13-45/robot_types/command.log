@@ -1,0 +1,2 @@
+Invoking command in '/home/conner/codePractice/rosDummy/build/robot_types': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/conner/codePractice/rosDummy/src/robot_types -DCMAKE_INSTALL_PREFIX=/home/conner/codePractice/rosDummy/install/robot_types
+Invoked command in '/home/conner/codePractice/rosDummy/build/robot_types' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/conner/codePractice/rosDummy/src/robot_types -DCMAKE_INSTALL_PREFIX=/home/conner/codePractice/rosDummy/install/robot_types

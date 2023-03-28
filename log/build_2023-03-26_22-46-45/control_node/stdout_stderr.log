@@ -1,0 +1,48 @@
+-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+-- Found robot_types: 0.0.0 (/home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake)
+-- Found rclcpp_action: 2.4.2 (/opt/ros/foxy/share/rclcpp_action/cmake)
+-- Found rclcpp_components: 2.4.2 (/opt/ros/foxy/share/rclcpp_components/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/conner/codePractice/rosDummy/build/control_node
+[ 25%] [32mBuilding CXX object CMakeFiles/action_client.dir/src/control_node.cpp.o[0m
+[ 75%] Built target PID_action_client
+[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:[m[K In member function ‘[01m[Kvoid Controller::PIDActionClient::result_callback(const WrappedResult&)[m[K’:
+[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:104:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[Kstd[m[K’
+  104 |     [01;31m[Kstd[m[K::cout << complete << std::endl;
+      |     [01;31m[K^~~[m[K
+[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:103:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcomplete[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  103 |     bool [01;35m[Kcomplete[m[K = result.result->complete
+      |          [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/class_loader/class_loader.hpp:56[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp_components/register_node_macro.hpp:18[m[K,
+                 from [01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:12[m[K:
+[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:[m[K At global scope:
+[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:112:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kaction_tutorials_cpp[m[K’ was not declared in this scope
+  112 | RCLCPP_COMPONENTS_REGISTER_NODE([01;31m[Kaction_tutorials_cpp[m[K::PIDActionClient)
+      |                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:112:1:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  112 | [01;31m[KRCLCPP_COMPONENTS_REGISTER_NODE[m[K(action_tutorials_cpp::PIDActionClient)
+      | [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/class_loader/class_loader_core.hpp:57[m[K,
+                 from [01m[K/opt/ros/foxy/include/class_loader/class_loader.hpp:55[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp_components/register_node_macro.hpp:18[m[K,
+                 from [01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:12[m[K:
+/opt/ros/foxy/include/class_loader/meta_object.hpp: In instantiation of ‘[01m[KB* class_loader::impl::MetaObject<C, B>::create() const [with C = int; B = rclcpp_components::NodeFactory][m[K’:
+[01m[K/opt/ros/foxy/include/class_loader/meta_object.hpp:216:7:[m[K   required from here
+[01m[K/opt/ros/foxy/include/class_loader/meta_object.hpp:218:12:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kint*[m[K’ to ‘[01m[Krclcpp_components::NodeFactory*[m[K’ in return
+  218 |     return [01;31m[Knew C[m[K;
+      |            [01;31m[K^~~~~[m[K
+      |            [01;31m[K|[m[K
+      |            [01;31m[Kint*[m[K
+make[2]: *** [CMakeFiles/action_client.dir/build.make:63: CMakeFiles/action_client.dir/src/control_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/action_client.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

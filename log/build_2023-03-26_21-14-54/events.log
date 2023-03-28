@@ -1,0 +1,612 @@
+[0.000000] (-) TimerEvent: {}
+[0.002453] (brain_node) JobQueued: {'identifier': 'brain_node', 'dependencies': OrderedDict()}
+[0.002563] (control_node) JobQueued: {'identifier': 'control_node', 'dependencies': OrderedDict()}
+[0.002649] (mediator_node) JobQueued: {'identifier': 'mediator_node', 'dependencies': OrderedDict()}
+[0.002733] (robot_types) JobQueued: {'identifier': 'robot_types', 'dependencies': OrderedDict()}
+[0.002840] (brain_node) JobStarted: {'identifier': 'brain_node'}
+[0.023933] (control_node) JobStarted: {'identifier': 'control_node'}
+[0.044120] (mediator_node) JobStarted: {'identifier': 'mediator_node'}
+[0.064903] (robot_types) JobStarted: {'identifier': 'robot_types'}
+[0.083447] (brain_node) JobProgress: {'identifier': 'brain_node', 'progress': 'cmake'}
+[0.086875] (brain_node) JobProgress: {'identifier': 'brain_node', 'progress': 'build'}
+[0.090396] (brain_node) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/conner/codePractice/rosDummy/build/brain_node', '--', '-j8', '-l8'], 'cwd': '/home/conner/codePractice/rosDummy/build/brain_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'conner'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/conner'), ('OLDPWD', '/home/conner/codePractice/rosDummy/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'conner'), ('NAME', 'ConnerSurface'), ('WSL_INTEROP', '/run/WSL/4206_interop'), ('PULSE_SERVER', '/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/conner/apps/nvm:/mnt/c/conner/apps/nvm:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Silverfrost/FTN95:/mnt/c/conner/apps/Python/Python310/Scripts/:/mnt/c/conner/apps/Python/Python310/:/mnt/c/Users/conne/AppData/Local/Microsoft/WindowsApps:/mnt/c/conner/apps/vscode/bin:/mnt/c/Conner/Apps/nvm/v16.17.0:/mnt/c/Conner/Apps/nvm:/mnt/c/Users/conne/AppData/Roaming/TinyTeX/bin/win32:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/conner/codePractice/rosDummy/build/brain_node'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.102730] (-) TimerEvent: {}
+[0.105758] (control_node) JobProgress: {'identifier': 'control_node', 'progress': 'cmake'}
+[0.114049] (control_node) JobProgress: {'identifier': 'control_node', 'progress': 'build'}
+[0.114513] (control_node) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/conner/codePractice/rosDummy/build/control_node', '--', '-j8', '-l8'], 'cwd': '/home/conner/codePractice/rosDummy/build/control_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'conner'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/conner'), ('OLDPWD', '/home/conner/codePractice/rosDummy/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'conner'), ('NAME', 'ConnerSurface'), ('WSL_INTEROP', '/run/WSL/4206_interop'), ('PULSE_SERVER', '/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/conner/apps/nvm:/mnt/c/conner/apps/nvm:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Silverfrost/FTN95:/mnt/c/conner/apps/Python/Python310/Scripts/:/mnt/c/conner/apps/Python/Python310/:/mnt/c/Users/conne/AppData/Local/Microsoft/WindowsApps:/mnt/c/conner/apps/vscode/bin:/mnt/c/Conner/Apps/nvm/v16.17.0:/mnt/c/Conner/Apps/nvm:/mnt/c/Users/conne/AppData/Roaming/TinyTeX/bin/win32:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/conner/codePractice/rosDummy/build/control_node'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.120814] (mediator_node) JobProgress: {'identifier': 'mediator_node', 'progress': 'cmake'}
+[0.121727] (mediator_node) JobProgress: {'identifier': 'mediator_node', 'progress': 'build'}
+[0.125641] (mediator_node) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/conner/codePractice/rosDummy/build/mediator_node', '--', '-j8', '-l8'], 'cwd': '/home/conner/codePractice/rosDummy/build/mediator_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'conner'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/conner'), ('OLDPWD', '/home/conner/codePractice/rosDummy/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'conner'), ('NAME', 'ConnerSurface'), ('WSL_INTEROP', '/run/WSL/4206_interop'), ('PULSE_SERVER', '/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/conner/apps/nvm:/mnt/c/conner/apps/nvm:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Silverfrost/FTN95:/mnt/c/conner/apps/Python/Python310/Scripts/:/mnt/c/conner/apps/Python/Python310/:/mnt/c/Users/conne/AppData/Local/Microsoft/WindowsApps:/mnt/c/conner/apps/vscode/bin:/mnt/c/Conner/Apps/nvm/v16.17.0:/mnt/c/Conner/Apps/nvm:/mnt/c/Users/conne/AppData/Roaming/TinyTeX/bin/win32:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/conner/codePractice/rosDummy/build/mediator_node'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.140851] (robot_types) JobProgress: {'identifier': 'robot_types', 'progress': 'cmake'}
+[0.141102] (robot_types) Command: {'cmd': ['/usr/bin/cmake', '/home/conner/codePractice/rosDummy/src/robot_types', '-DCMAKE_INSTALL_PREFIX=/home/conner/codePractice/rosDummy/install/robot_types'], 'cwd': '/home/conner/codePractice/rosDummy/build/robot_types', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'conner'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/conner'), ('OLDPWD', '/home/conner/codePractice/rosDummy/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'conner'), ('NAME', 'ConnerSurface'), ('WSL_INTEROP', '/run/WSL/4206_interop'), ('PULSE_SERVER', '/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/conner/apps/nvm:/mnt/c/conner/apps/nvm:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Silverfrost/FTN95:/mnt/c/conner/apps/Python/Python310/Scripts/:/mnt/c/conner/apps/Python/Python310/:/mnt/c/Users/conne/AppData/Local/Microsoft/WindowsApps:/mnt/c/conner/apps/vscode/bin:/mnt/c/Conner/Apps/nvm/v16.17.0:/mnt/c/Conner/Apps/nvm:/mnt/c/Users/conne/AppData/Roaming/TinyTeX/bin/win32:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/conner/codePractice/rosDummy/build/robot_types'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.185433] (robot_types) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.203929] (brain_node) CommandEnded: {'returncode': 0}
+[0.205037] (-) TimerEvent: {}
+[0.215926] (control_node) CommandEnded: {'returncode': 0}
+[0.231391] (mediator_node) CommandEnded: {'returncode': 0}
+[0.237225] (robot_types) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.255575] (brain_node) JobProgress: {'identifier': 'brain_node', 'progress': 'install'}
+[0.285531] (brain_node) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/conner/codePractice/rosDummy/build/brain_node'], 'cwd': '/home/conner/codePractice/rosDummy/build/brain_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'conner'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/conner'), ('OLDPWD', '/home/conner/codePractice/rosDummy/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'conner'), ('NAME', 'ConnerSurface'), ('WSL_INTEROP', '/run/WSL/4206_interop'), ('PULSE_SERVER', '/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/conner/apps/nvm:/mnt/c/conner/apps/nvm:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Silverfrost/FTN95:/mnt/c/conner/apps/Python/Python310/Scripts/:/mnt/c/conner/apps/Python/Python310/:/mnt/c/Users/conne/AppData/Local/Microsoft/WindowsApps:/mnt/c/conner/apps/vscode/bin:/mnt/c/Conner/Apps/nvm/v16.17.0:/mnt/c/Conner/Apps/nvm:/mnt/c/Users/conne/AppData/Roaming/TinyTeX/bin/win32:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/conner/codePractice/rosDummy/build/brain_node'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.290730] (control_node) JobProgress: {'identifier': 'control_node', 'progress': 'install'}
+[0.295517] (control_node) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/conner/codePractice/rosDummy/build/control_node'], 'cwd': '/home/conner/codePractice/rosDummy/build/control_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'conner'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/conner'), ('OLDPWD', '/home/conner/codePractice/rosDummy/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'conner'), ('NAME', 'ConnerSurface'), ('WSL_INTEROP', '/run/WSL/4206_interop'), ('PULSE_SERVER', '/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/conner/apps/nvm:/mnt/c/conner/apps/nvm:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Silverfrost/FTN95:/mnt/c/conner/apps/Python/Python310/Scripts/:/mnt/c/conner/apps/Python/Python310/:/mnt/c/Users/conne/AppData/Local/Microsoft/WindowsApps:/mnt/c/conner/apps/vscode/bin:/mnt/c/Conner/Apps/nvm/v16.17.0:/mnt/c/Conner/Apps/nvm:/mnt/c/Users/conne/AppData/Roaming/TinyTeX/bin/win32:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/conner/codePractice/rosDummy/build/control_node'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.304229] (mediator_node) JobProgress: {'identifier': 'mediator_node', 'progress': 'install'}
+[0.304450] (mediator_node) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/conner/codePractice/rosDummy/build/mediator_node'], 'cwd': '/home/conner/codePractice/rosDummy/build/mediator_node', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'conner'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/conner'), ('OLDPWD', '/home/conner/codePractice/rosDummy/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'conner'), ('NAME', 'ConnerSurface'), ('WSL_INTEROP', '/run/WSL/4206_interop'), ('PULSE_SERVER', '/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/conner/apps/nvm:/mnt/c/conner/apps/nvm:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Silverfrost/FTN95:/mnt/c/conner/apps/Python/Python310/Scripts/:/mnt/c/conner/apps/Python/Python310/:/mnt/c/Users/conne/AppData/Local/Microsoft/WindowsApps:/mnt/c/conner/apps/vscode/bin:/mnt/c/Conner/Apps/nvm/v16.17.0:/mnt/c/Conner/Apps/nvm:/mnt/c/Users/conne/AppData/Roaming/TinyTeX/bin/win32:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/conner/codePractice/rosDummy/build/mediator_node'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.305753] (-) TimerEvent: {}
+[0.307926] (brain_node) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.308524] (brain_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/ament_index/resource_index/package_run_dependencies/brain_node\n'}
+[0.308709] (brain_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/ament_index/resource_index/parent_prefix_path/brain_node\n'}
+[0.309173] (brain_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/environment/ament_prefix_path.sh\n'}
+[0.309707] (brain_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/environment/ament_prefix_path.dsv\n'}
+[0.310220] (brain_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/environment/path.sh\n'}
+[0.310794] (brain_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/environment/path.dsv\n'}
+[0.311602] (brain_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/local_setup.bash\n'}
+[0.312263] (brain_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/local_setup.sh\n'}
+[0.312738] (brain_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/local_setup.zsh\n'}
+[0.313220] (brain_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/local_setup.dsv\n'}
+[0.313728] (brain_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/package.dsv\n'}
+[0.314139] (brain_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/ament_index/resource_index/packages/brain_node\n'}
+[0.317492] (brain_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/cmake/brain_nodeConfig.cmake\n'}
+[0.318826] (brain_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/cmake/brain_nodeConfig-version.cmake\n'}
+[0.319382] (brain_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/brain_node/share/brain_node/package.xml\n'}
+[0.319919] (control_node) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.320550] (control_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/ament_index/resource_index/package_run_dependencies/control_node\n'}
+[0.321071] (control_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/ament_index/resource_index/parent_prefix_path/control_node\n'}
+[0.321605] (control_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/ament_prefix_path.sh\n'}
+[0.322955] (control_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/ament_prefix_path.dsv\n'}
+[0.324393] (control_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/path.sh\n'}
+[0.325718] (control_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/environment/path.dsv\n'}
+[0.326235] (control_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.bash\n'}
+[0.327711] (control_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.sh\n'}
+[0.328090] (control_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.zsh\n'}
+[0.328509] (control_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/local_setup.dsv\n'}
+[0.328860] (control_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/package.dsv\n'}
+[0.329252] (control_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/ament_index/resource_index/packages/control_node\n'}
+[0.329594] (control_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/cmake/control_nodeConfig.cmake\n'}
+[0.330959] (control_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/cmake/control_nodeConfig-version.cmake\n'}
+[0.331997] (control_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/control_node/share/control_node/package.xml\n'}
+[0.332576] (mediator_node) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.334190] (mediator_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/package_run_dependencies/mediator_node\n'}
+[0.335678] (mediator_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/parent_prefix_path/mediator_node\n'}
+[0.336988] (mediator_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/ament_prefix_path.sh\n'}
+[0.338833] (mediator_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/ament_prefix_path.dsv\n'}
+[0.340696] (mediator_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/path.sh\n'}
+[0.341715] (mediator_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/path.dsv\n'}
+[0.345160] (mediator_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.bash\n'}
+[0.345571] (mediator_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.sh\n'}
+[0.346481] (mediator_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.zsh\n'}
+[0.346796] (mediator_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.dsv\n'}
+[0.347549] (mediator_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/package.dsv\n'}
+[0.354682] (mediator_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/packages/mediator_node\n'}
+[0.355281] (mediator_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/cmake/mediator_nodeConfig.cmake\n'}
+[0.355805] (mediator_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/cmake/mediator_nodeConfig-version.cmake\n'}
+[0.356871] (mediator_node) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/package.xml\n'}
+[0.357202] (brain_node) CommandEnded: {'returncode': 0}
+[0.404090] (control_node) CommandEnded: {'returncode': 0}
+[0.410994] (-) TimerEvent: {}
+[0.445893] (mediator_node) CommandEnded: {'returncode': 0}
+[0.514497] (-) TimerEvent: {}
+[0.532623] (brain_node) JobEnded: {'identifier': 'brain_node', 'rc': 0}
+[0.552404] (control_node) JobEnded: {'identifier': 'control_node', 'rc': 0}
+[0.588688] (mediator_node) JobEnded: {'identifier': 'mediator_node', 'rc': 0}
+[0.615015] (-) TimerEvent: {}
+[0.668467] (robot_types) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.672085] (robot_types) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.676927] (robot_types) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.715422] (-) TimerEvent: {}
+[0.816173] (-) TimerEvent: {}
+[0.916869] (-) TimerEvent: {}
+[1.017570] (-) TimerEvent: {}
+[1.118430] (-) TimerEvent: {}
+[1.220053] (-) TimerEvent: {}
+[1.320731] (-) TimerEvent: {}
+[1.421352] (-) TimerEvent: {}
+[1.521923] (-) TimerEvent: {}
+[1.622548] (-) TimerEvent: {}
+[1.723119] (-) TimerEvent: {}
+[1.823873] (-) TimerEvent: {}
+[1.924520] (-) TimerEvent: {}
+[2.025375] (-) TimerEvent: {}
+[2.126114] (-) TimerEvent: {}
+[2.226921] (-) TimerEvent: {}
+[2.327536] (-) TimerEvent: {}
+[2.428271] (-) TimerEvent: {}
+[2.528840] (-) TimerEvent: {}
+[2.629567] (-) TimerEvent: {}
+[2.733723] (-) TimerEvent: {}
+[2.834394] (-) TimerEvent: {}
+[2.935046] (-) TimerEvent: {}
+[3.035637] (-) TimerEvent: {}
+[3.136342] (-) TimerEvent: {}
+[3.237061] (-) TimerEvent: {}
+[3.337718] (-) TimerEvent: {}
+[3.438474] (-) TimerEvent: {}
+[3.539210] (-) TimerEvent: {}
+[3.639856] (-) TimerEvent: {}
+[3.740523] (-) TimerEvent: {}
+[3.841076] (-) TimerEvent: {}
+[3.941592] (-) TimerEvent: {}
+[4.042177] (-) TimerEvent: {}
+[4.142794] (-) TimerEvent: {}
+[4.243601] (-) TimerEvent: {}
+[4.344323] (-) TimerEvent: {}
+[4.445002] (-) TimerEvent: {}
+[4.545575] (-) TimerEvent: {}
+[4.646238] (-) TimerEvent: {}
+[4.746885] (-) TimerEvent: {}
+[4.847677] (-) TimerEvent: {}
+[4.948535] (-) TimerEvent: {}
+[5.049196] (-) TimerEvent: {}
+[5.149837] (-) TimerEvent: {}
+[5.250488] (-) TimerEvent: {}
+[5.351196] (-) TimerEvent: {}
+[5.452060] (-) TimerEvent: {}
+[5.552811] (-) TimerEvent: {}
+[5.653464] (-) TimerEvent: {}
+[5.754288] (-) TimerEvent: {}
+[5.855063] (-) TimerEvent: {}
+[5.955725] (-) TimerEvent: {}
+[6.056454] (-) TimerEvent: {}
+[6.157449] (-) TimerEvent: {}
+[6.258561] (-) TimerEvent: {}
+[6.359460] (-) TimerEvent: {}
+[6.460215] (-) TimerEvent: {}
+[6.561009] (-) TimerEvent: {}
+[6.661675] (-) TimerEvent: {}
+[6.762346] (-) TimerEvent: {}
+[6.862928] (-) TimerEvent: {}
+[6.963556] (-) TimerEvent: {}
+[7.064376] (-) TimerEvent: {}
+[7.165217] (-) TimerEvent: {}
+[7.265926] (-) TimerEvent: {}
+[7.366594] (-) TimerEvent: {}
+[7.467297] (-) TimerEvent: {}
+[7.567943] (-) TimerEvent: {}
+[7.668591] (-) TimerEvent: {}
+[7.769249] (-) TimerEvent: {}
+[7.869806] (-) TimerEvent: {}
+[7.970480] (-) TimerEvent: {}
+[8.071109] (-) TimerEvent: {}
+[8.171720] (-) TimerEvent: {}
+[8.272443] (-) TimerEvent: {}
+[8.373217] (-) TimerEvent: {}
+[8.474103] (-) TimerEvent: {}
+[8.574798] (-) TimerEvent: {}
+[8.675417] (-) TimerEvent: {}
+[8.776242] (-) TimerEvent: {}
+[8.877003] (-) TimerEvent: {}
+[8.977930] (-) TimerEvent: {}
+[9.078954] (-) TimerEvent: {}
+[9.179556] (-) TimerEvent: {}
+[9.280139] (-) TimerEvent: {}
+[9.380725] (-) TimerEvent: {}
+[9.481405] (-) TimerEvent: {}
+[9.582097] (-) TimerEvent: {}
+[9.682845] (-) TimerEvent: {}
+[9.783535] (-) TimerEvent: {}
+[9.884175] (-) TimerEvent: {}
+[9.984793] (-) TimerEvent: {}
+[10.085548] (-) TimerEvent: {}
+[10.186232] (-) TimerEvent: {}
+[10.286963] (-) TimerEvent: {}
+[10.387591] (-) TimerEvent: {}
+[10.488273] (-) TimerEvent: {}
+[10.588949] (-) TimerEvent: {}
+[10.689659] (-) TimerEvent: {}
+[10.790356] (-) TimerEvent: {}
+[10.891155] (-) TimerEvent: {}
+[10.991647] (-) TimerEvent: {}
+[11.010441] (robot_types) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[11.070233] (robot_types) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[11.091979] (-) TimerEvent: {}
+[11.196156] (-) TimerEvent: {}
+[11.296686] (-) TimerEvent: {}
+[11.396133] (robot_types) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[11.396881] (-) TimerEvent: {}
+[11.497393] (-) TimerEvent: {}
+[11.598237] (-) TimerEvent: {}
+[11.698868] (-) TimerEvent: {}
+[11.799482] (-) TimerEvent: {}
+[11.900302] (-) TimerEvent: {}
+[12.000906] (-) TimerEvent: {}
+[12.101676] (-) TimerEvent: {}
+[12.202463] (-) TimerEvent: {}
+[12.303207] (-) TimerEvent: {}
+[12.403839] (-) TimerEvent: {}
+[12.504459] (-) TimerEvent: {}
+[12.605176] (-) TimerEvent: {}
+[12.706047] (-) TimerEvent: {}
+[12.806695] (-) TimerEvent: {}
+[12.907256] (-) TimerEvent: {}
+[13.008024] (-) TimerEvent: {}
+[13.108592] (-) TimerEvent: {}
+[13.209207] (-) TimerEvent: {}
+[13.309853] (-) TimerEvent: {}
+[13.410521] (-) TimerEvent: {}
+[13.511136] (-) TimerEvent: {}
+[13.611775] (-) TimerEvent: {}
+[13.712264] (-) TimerEvent: {}
+[13.812899] (-) TimerEvent: {}
+[13.913558] (-) TimerEvent: {}
+[14.014159] (-) TimerEvent: {}
+[14.114866] (-) TimerEvent: {}
+[14.215508] (-) TimerEvent: {}
+[14.316109] (-) TimerEvent: {}
+[14.416778] (-) TimerEvent: {}
+[14.517383] (-) TimerEvent: {}
+[14.618046] (-) TimerEvent: {}
+[14.718846] (-) TimerEvent: {}
+[14.819572] (-) TimerEvent: {}
+[14.920454] (-) TimerEvent: {}
+[15.021140] (-) TimerEvent: {}
+[15.121852] (-) TimerEvent: {}
+[15.222602] (-) TimerEvent: {}
+[15.323652] (-) TimerEvent: {}
+[15.424265] (-) TimerEvent: {}
+[15.524943] (-) TimerEvent: {}
+[15.625848] (-) TimerEvent: {}
+[15.726799] (-) TimerEvent: {}
+[15.827430] (-) TimerEvent: {}
+[15.928363] (-) TimerEvent: {}
+[16.029270] (-) TimerEvent: {}
+[16.129880] (-) TimerEvent: {}
+[16.230893] (-) TimerEvent: {}
+[16.331569] (-) TimerEvent: {}
+[16.432108] (-) TimerEvent: {}
+[16.532821] (-) TimerEvent: {}
+[16.633548] (-) TimerEvent: {}
+[16.734218] (-) TimerEvent: {}
+[16.834807] (-) TimerEvent: {}
+[16.935497] (-) TimerEvent: {}
+[17.036134] (-) TimerEvent: {}
+[17.137123] (-) TimerEvent: {}
+[17.238085] (-) TimerEvent: {}
+[17.339045] (-) TimerEvent: {}
+[17.439836] (-) TimerEvent: {}
+[17.540596] (-) TimerEvent: {}
+[17.641417] (-) TimerEvent: {}
+[17.742123] (-) TimerEvent: {}
+[17.842722] (-) TimerEvent: {}
+[17.943293] (-) TimerEvent: {}
+[18.043858] (-) TimerEvent: {}
+[18.144389] (-) TimerEvent: {}
+[18.245080] (-) TimerEvent: {}
+[18.345843] (-) TimerEvent: {}
+[18.446540] (-) TimerEvent: {}
+[18.547408] (-) TimerEvent: {}
+[18.648382] (-) TimerEvent: {}
+[18.749504] (-) TimerEvent: {}
+[18.850426] (-) TimerEvent: {}
+[18.951107] (-) TimerEvent: {}
+[19.051694] (-) TimerEvent: {}
+[19.152276] (-) TimerEvent: {}
+[19.252988] (-) TimerEvent: {}
+[19.353608] (-) TimerEvent: {}
+[19.454203] (-) TimerEvent: {}
+[19.554893] (-) TimerEvent: {}
+[19.655570] (-) TimerEvent: {}
+[19.756834] (-) TimerEvent: {}
+[19.857511] (-) TimerEvent: {}
+[19.958595] (-) TimerEvent: {}
+[20.059491] (-) TimerEvent: {}
+[20.160139] (-) TimerEvent: {}
+[20.260751] (-) TimerEvent: {}
+[20.361533] (-) TimerEvent: {}
+[20.462140] (-) TimerEvent: {}
+[20.562771] (-) TimerEvent: {}
+[20.663400] (-) TimerEvent: {}
+[20.764153] (-) TimerEvent: {}
+[20.864831] (-) TimerEvent: {}
+[20.965457] (-) TimerEvent: {}
+[21.066179] (-) TimerEvent: {}
+[21.166988] (-) TimerEvent: {}
+[21.268055] (-) TimerEvent: {}
+[21.368686] (-) TimerEvent: {}
+[21.469324] (-) TimerEvent: {}
+[21.570030] (-) TimerEvent: {}
+[21.662088] (robot_types) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[21.670174] (-) TimerEvent: {}
+[21.698069] (robot_types) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[21.738446] (robot_types) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[21.742607] (robot_types) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[21.770340] (-) TimerEvent: {}
+[21.870956] (-) TimerEvent: {}
+[21.971569] (-) TimerEvent: {}
+[22.072220] (-) TimerEvent: {}
+[22.173458] (-) TimerEvent: {}
+[22.274006] (-) TimerEvent: {}
+[22.374683] (-) TimerEvent: {}
+[22.475301] (-) TimerEvent: {}
+[22.575979] (-) TimerEvent: {}
+[22.607791] (robot_types) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[22.608850] (robot_types) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[22.609179] (robot_types) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[22.609332] (robot_types) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[22.640831] (robot_types) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[22.676193] (-) TimerEvent: {}
+[22.776808] (-) TimerEvent: {}
+[22.824502] (robot_types) StdoutLine: {'line': b'-- Configuring done\n'}
+[22.877134] (-) TimerEvent: {}
+[22.929634] (robot_types) StdoutLine: {'line': b'-- Generating done\n'}
+[22.934649] (robot_types) StdoutLine: {'line': b'-- Build files have been written to: /home/conner/codePractice/rosDummy/build/robot_types\n'}
+[22.945153] (robot_types) CommandEnded: {'returncode': 0}
+[22.946258] (robot_types) JobProgress: {'identifier': 'robot_types', 'progress': 'build'}
+[22.946746] (robot_types) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/conner/codePractice/rosDummy/build/robot_types', '--', '-j8', '-l8'], 'cwd': '/home/conner/codePractice/rosDummy/build/robot_types', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'conner'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/conner'), ('OLDPWD', '/home/conner/codePractice/rosDummy/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'conner'), ('NAME', 'ConnerSurface'), ('WSL_INTEROP', '/run/WSL/4206_interop'), ('PULSE_SERVER', '/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/conner/apps/nvm:/mnt/c/conner/apps/nvm:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Silverfrost/FTN95:/mnt/c/conner/apps/Python/Python310/Scripts/:/mnt/c/conner/apps/Python/Python310/:/mnt/c/Users/conne/AppData/Local/Microsoft/WindowsApps:/mnt/c/conner/apps/vscode/bin:/mnt/c/Conner/Apps/nvm/v16.17.0:/mnt/c/Conner/Apps/nvm:/mnt/c/Users/conne/AppData/Roaming/TinyTeX/bin/win32:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/conner/codePractice/rosDummy/build/robot_types'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[22.977520] (-) TimerEvent: {}
+[23.001733] (robot_types) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[23.002720] (robot_types) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target robot_types__cpp\x1b[0m\n'}
+[23.027521] (robot_types) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[23.077688] (-) TimerEvent: {}
+[23.178356] (-) TimerEvent: {}
+[23.278948] (-) TimerEvent: {}
+[23.379510] (-) TimerEvent: {}
+[23.480127] (-) TimerEvent: {}
+[23.580978] (-) TimerEvent: {}
+[23.681863] (-) TimerEvent: {}
+[23.753694] (robot_types) StdoutLine: {'line': b'[  6%] Built target robot_types__cpp\n'}
+[23.774097] (robot_types) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[23.774478] (robot_types) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[23.774687] (robot_types) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[23.782145] (-) TimerEvent: {}
+[23.884788] (-) TimerEvent: {}
+[23.918093] (robot_types) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target robot_types__rosidl_generator_c\x1b[0m\n'}
+[23.984944] (robot_types) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding C object CMakeFiles/robot_types__rosidl_generator_c.dir/rosidl_generator_c/robot_types/action/detail/pid__functions.c.o\x1b[0m\n'}
+[23.985243] (-) TimerEvent: {}
+[24.085870] (-) TimerEvent: {}
+[24.186559] (-) TimerEvent: {}
+[24.287282] (-) TimerEvent: {}
+[24.381339] (robot_types) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library librobot_types__rosidl_generator_c.so\x1b[0m\n'}
+[24.387513] (-) TimerEvent: {}
+[24.486441] (robot_types) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target robot_types__rosidl_typesupport_cpp\x1b[0m\n'}
+[24.487768] (-) TimerEvent: {}
+[24.586403] (robot_types) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/robot_types__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_types/action/pid__type_support.cpp.o\x1b[0m\n'}
+[24.587978] (-) TimerEvent: {}
+[24.676798] (robot_types) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target robot_types__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[24.688425] (-) TimerEvent: {}
+[24.725373] (robot_types) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/robot_types__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_types/action/detail/pid__type_support.cpp.o\x1b[0m\n'}
+[24.781495] (robot_types) StdoutLine: {'line': b'[ 29%] Built target robot_types__rosidl_generator_c\n'}
+[24.788683] (-) TimerEvent: {}
+[24.797969] (robot_types) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target robot_types__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[24.801866] (robot_types) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[24.802927] (robot_types) StdoutLine: {'line': b'[ 35%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[24.888904] (-) TimerEvent: {}
+[24.909820] (robot_types) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/robot_types__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_types/action/detail/dds_fastrtps/pid__type_support.cpp.o\x1b[0m\n'}
+[24.989235] (-) TimerEvent: {}
+[25.089827] (-) TimerEvent: {}
+[25.190578] (-) TimerEvent: {}
+[25.291349] (-) TimerEvent: {}
+[25.392026] (-) TimerEvent: {}
+[25.492705] (-) TimerEvent: {}
+[25.593440] (-) TimerEvent: {}
+[25.694207] (-) TimerEvent: {}
+[25.720687] (robot_types) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target robot_types__rosidl_typesupport_c\x1b[0m\n'}
+[25.755616] (robot_types) StdoutLine: {'line': b'[ 41%] \x1b[32m\x1b[1mLinking CXX shared library librobot_types__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[25.779736] (robot_types) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/robot_types__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_types/action/pid__type_support.cpp.o\x1b[0m\n'}
+[25.794438] (-) TimerEvent: {}
+[25.895213] (-) TimerEvent: {}
+[25.927823] (robot_types) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library librobot_types__rosidl_typesupport_c.so\x1b[0m\n'}
+[25.980286] (robot_types) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target robot_types__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[25.995489] (-) TimerEvent: {}
+[26.043583] (robot_types) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/robot_types__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_types/action/detail/pid__type_support.c.o\x1b[0m\n'}
+[26.095716] (-) TimerEvent: {}
+[26.106745] (robot_types) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CXX shared library librobot_types__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[26.196056] (-) TimerEvent: {}
+[26.211774] (robot_types) StdoutLine: {'line': b'[ 54%] Built target robot_types__rosidl_typesupport_cpp\n'}
+[26.233329] (robot_types) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking C shared library librobot_types__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[26.296305] (-) TimerEvent: {}
+[26.367525] (robot_types) StdoutLine: {'line': b'[ 58%] Built target robot_types__rosidl_typesupport_c\n'}
+[26.396593] (-) TimerEvent: {}
+[26.497414] (-) TimerEvent: {}
+[26.598410] (-) TimerEvent: {}
+[26.601846] (robot_types) StdoutLine: {'line': b'[ 58%] Built target robot_types__rosidl_typesupport_introspection_c\n'}
+[26.660698] (robot_types) StdoutLine: {'line': b'[ 58%] Built target robot_types__rosidl_typesupport_introspection_cpp\n'}
+[26.698632] (-) TimerEvent: {}
+[26.799946] (-) TimerEvent: {}
+[26.900791] (-) TimerEvent: {}
+[27.001490] (-) TimerEvent: {}
+[27.102362] (-) TimerEvent: {}
+[27.110155] (robot_types) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library librobot_types__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[27.202560] (-) TimerEvent: {}
+[27.303339] (-) TimerEvent: {}
+[27.403991] (-) TimerEvent: {}
+[27.504667] (-) TimerEvent: {}
+[27.605828] (-) TimerEvent: {}
+[27.627293] (robot_types) StdoutLine: {'line': b'[ 61%] Built target robot_types__rosidl_typesupport_fastrtps_cpp\n'}
+[27.653083] (robot_types) StdoutLine: {'line': b'[ 64%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[27.706072] (-) TimerEvent: {}
+[27.806927] (-) TimerEvent: {}
+[27.907604] (-) TimerEvent: {}
+[28.008076] (-) TimerEvent: {}
+[28.108600] (-) TimerEvent: {}
+[28.209090] (-) TimerEvent: {}
+[28.274477] (robot_types) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target robot_types__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[28.309345] (-) TimerEvent: {}
+[28.322716] (robot_types) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/robot_types__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_types/action/detail/pid__type_support_c.cpp.o\x1b[0m\n'}
+[28.409515] (-) TimerEvent: {}
+[28.510627] (-) TimerEvent: {}
+[28.611462] (-) TimerEvent: {}
+[28.711977] (-) TimerEvent: {}
+[28.812565] (-) TimerEvent: {}
+[28.913723] (-) TimerEvent: {}
+[28.989672] (robot_types) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library librobot_types__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[29.014056] (-) TimerEvent: {}
+[29.114999] (-) TimerEvent: {}
+[29.215930] (-) TimerEvent: {}
+[29.316745] (-) TimerEvent: {}
+[29.417630] (-) TimerEvent: {}
+[29.484943] (robot_types) StdoutLine: {'line': b'[ 70%] Built target robot_types__rosidl_typesupport_fastrtps_c\n'}
+[29.510049] (robot_types) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target robot_types\x1b[0m\n'}
+[29.518004] (-) TimerEvent: {}
+[29.532009] (robot_types) StdoutLine: {'line': b'[ 70%] Built target robot_types\n'}
+[29.558478] (robot_types) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target robot_types__py\x1b[0m\n'}
+[29.581183] (robot_types) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[29.618622] (-) TimerEvent: {}
+[29.719418] (-) TimerEvent: {}
+[29.820529] (-) TimerEvent: {}
+[29.921051] (-) TimerEvent: {}
+[30.021827] (-) TimerEvent: {}
+[30.122615] (-) TimerEvent: {}
+[30.223269] (-) TimerEvent: {}
+[30.323837] (-) TimerEvent: {}
+[30.424431] (-) TimerEvent: {}
+[30.525002] (-) TimerEvent: {}
+[30.625648] (-) TimerEvent: {}
+[30.726442] (-) TimerEvent: {}
+[30.827064] (-) TimerEvent: {}
+[30.928051] (-) TimerEvent: {}
+[31.028815] (-) TimerEvent: {}
+[31.129525] (-) TimerEvent: {}
+[31.230191] (-) TimerEvent: {}
+[31.330850] (-) TimerEvent: {}
+[31.431523] (-) TimerEvent: {}
+[31.474502] (robot_types) StdoutLine: {'line': b'[ 74%] Built target robot_types__py\n'}
+[31.496609] (robot_types) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target robot_types__python\x1b[0m\n'}
+[31.531798] (-) TimerEvent: {}
+[31.609453] (robot_types) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/robot_types__python.dir/rosidl_generator_py/robot_types/action/_pid_s.c.o\x1b[0m\n'}
+[31.632045] (-) TimerEvent: {}
+[31.732782] (-) TimerEvent: {}
+[31.833399] (-) TimerEvent: {}
+[31.934240] (-) TimerEvent: {}
+[31.939332] (robot_types) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/robot_types/librobot_types__python.so\x1b[0m\n'}
+[32.034625] (-) TimerEvent: {}
+[32.135568] (-) TimerEvent: {}
+[32.236261] (-) TimerEvent: {}
+[32.264994] (robot_types) StdoutLine: {'line': b'[ 80%] Built target robot_types__python\n'}
+[32.287379] (robot_types) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target robot_types__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[32.287986] (robot_types) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target robot_types__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[32.288325] (robot_types) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target robot_types__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[32.319633] (robot_types) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/robot_types__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/robot_types/_robot_types_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[32.324802] (robot_types) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/robot_types__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/robot_types/_robot_types_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[32.327843] (robot_types) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/robot_types__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/robot_types/_robot_types_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[32.336520] (-) TimerEvent: {}
+[32.437154] (-) TimerEvent: {}
+[32.527049] (robot_types) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/robot_types/robot_types_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[32.528121] (robot_types) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/robot_types/robot_types_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[32.537400] (-) TimerEvent: {}
+[32.544005] (robot_types) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/robot_types/robot_types_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[32.637575] (-) TimerEvent: {}
+[32.738180] (-) TimerEvent: {}
+[32.801240] (robot_types) StdoutLine: {'line': b'[100%] Built target robot_types__rosidl_typesupport_introspection_c__pyext\n'}
+[32.803505] (robot_types) StdoutLine: {'line': b'[100%] Built target robot_types__rosidl_typesupport_c__pyext\n'}
+[32.838474] (-) TimerEvent: {}
+[32.907418] (robot_types) StdoutLine: {'line': b'[100%] Built target robot_types__rosidl_typesupport_fastrtps_c__pyext\n'}
+[32.924125] (robot_types) CommandEnded: {'returncode': 0}
+[32.938726] (-) TimerEvent: {}
+[33.007004] (robot_types) JobProgress: {'identifier': 'robot_types', 'progress': 'install'}
+[33.007216] (robot_types) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/conner/codePractice/rosDummy/build/robot_types'], 'cwd': '/home/conner/codePractice/rosDummy/build/robot_types', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'conner'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/conner'), ('OLDPWD', '/home/conner/codePractice/rosDummy/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'conner'), ('NAME', 'ConnerSurface'), ('WSL_INTEROP', '/run/WSL/4206_interop'), ('PULSE_SERVER', '/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/conner/apps/nvm:/mnt/c/conner/apps/nvm:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Silverfrost/FTN95:/mnt/c/conner/apps/Python/Python310/Scripts/:/mnt/c/conner/apps/Python/Python310/:/mnt/c/Users/conne/AppData/Local/Microsoft/WindowsApps:/mnt/c/conner/apps/vscode/bin:/mnt/c/Conner/Apps/nvm/v16.17.0:/mnt/c/Conner/Apps/nvm:/mnt/c/Users/conne/AppData/Roaming/TinyTeX/bin/win32:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/conner/codePractice/rosDummy/build/robot_types'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[33.020322] (robot_types) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[33.021085] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/ament_index/resource_index/rosidl_interfaces/robot_types\n'}
+[33.021889] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types\n'}
+[33.022014] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/msg\n'}
+[33.039179] (-) TimerEvent: {}
+[33.047306] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/msg/rosidl_generator_c__visibility_control.h\n'}
+[33.048388] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action\n'}
+[33.048883] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/pid.h\n'}
+[33.049561] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail\n'}
+[33.050089] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail/pid__struct.h\n'}
+[33.050389] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail/pid__functions.h\n'}
+[33.050658] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail/pid__type_support.h\n'}
+[33.050916] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail/pid__functions.c\n'}
+[33.051549] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/environment/library_path.sh\n'}
+[33.051855] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/environment/library_path.dsv\n'}
+[33.052471] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__rosidl_generator_c.so\n'}
+[33.053201] (robot_types) StdoutLine: {'line': b'-- Set runtime path of "/home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__rosidl_generator_c.so" to ""\n'}
+[33.053792] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types\n'}
+[33.054540] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/msg\n'}
+[33.055051] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[33.055342] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action\n'}
+[33.055956] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail\n'}
+[33.056579] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail/pid__rosidl_typesupport_fastrtps_c.h\n'}
+[33.057605] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__rosidl_typesupport_fastrtps_c.so\n'}
+[33.057801] (robot_types) StdoutLine: {'line': b'-- Set runtime path of "/home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[33.057950] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types\n'}
+[33.058572] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/msg\n'}
+[33.059294] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[33.059802] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action\n'}
+[33.060306] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail\n'}
+[33.060815] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail/pid__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[33.061272] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail/dds_fastrtps\n'}
+[33.062128] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__rosidl_typesupport_fastrtps_cpp.so\n'}
+[33.062852] (robot_types) StdoutLine: {'line': b'-- Set runtime path of "/home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[33.063471] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types\n'}
+[33.064073] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/msg\n'}
+[33.064651] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[33.065096] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action\n'}
+[33.065545] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail\n'}
+[33.065955] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail/pid__rosidl_typesupport_introspection_c.h\n'}
+[33.066190] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail/pid__type_support.c\n'}
+[33.066338] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__rosidl_typesupport_introspection_c.so\n'}
+[33.066476] (robot_types) StdoutLine: {'line': b'-- Set runtime path of "/home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__rosidl_typesupport_introspection_c.so" to ""\n'}
+[33.066617] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__rosidl_typesupport_c.so\n'}
+[33.066768] (robot_types) StdoutLine: {'line': b'-- Set runtime path of "/home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__rosidl_typesupport_c.so" to ""\n'}
+[33.066938] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types\n'}
+[33.067110] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action\n'}
+[33.067842] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/pid.hpp\n'}
+[33.068085] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail\n'}
+[33.068308] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail/pid__traits.hpp\n'}
+[33.068662] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail/pid__struct.hpp\n'}
+[33.068858] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail/pid__builder.hpp\n'}
+[33.069051] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types\n'}
+[33.069208] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action\n'}
+[33.069316] (robot_types) StdoutLine: {'line': b'-- Up-to-date: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail\n'}
+[33.069410] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail/pid__type_support.cpp\n'}
+[33.069506] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/include/robot_types/action/detail/pid__rosidl_typesupport_introspection_cpp.hpp\n'}
+[33.069611] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__rosidl_typesupport_introspection_cpp.so\n'}
+[33.069703] (robot_types) StdoutLine: {'line': b'-- Set runtime path of "/home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[33.069794] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__rosidl_typesupport_cpp.so\n'}
+[33.069885] (robot_types) StdoutLine: {'line': b'-- Set runtime path of "/home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__rosidl_typesupport_cpp.so" to ""\n'}
+[33.070003] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/environment/pythonpath.sh\n'}
+[33.070089] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/environment/pythonpath.dsv\n'}
+[33.070229] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/python3.8/site-packages/robot_types/__init__.py\n'}
+[33.117221] (robot_types) StdoutLine: {'line': b"Compiling '/home/conner/codePractice/rosDummy/install/robot_types/lib/python3.8/site-packages/robot_types/__init__.py'...\n"}
+[33.125085] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/python3.8/site-packages/robot_types/action\n'}
+[33.125653] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/python3.8/site-packages/robot_types/action/_pid.py\n'}
+[33.125769] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/python3.8/site-packages/robot_types/action/_pid_s.c\n'}
+[33.126019] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/python3.8/site-packages/robot_types/action/__init__.py\n'}
+[33.126725] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/python3.8/site-packages/robot_types/robot_types_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[33.126860] (robot_types) StdoutLine: {'line': b'-- Set runtime path of "/home/conner/codePractice/rosDummy/install/robot_types/lib/python3.8/site-packages/robot_types/robot_types_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[33.127314] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/python3.8/site-packages/robot_types/robot_types_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[33.127807] (robot_types) StdoutLine: {'line': b'-- Set runtime path of "/home/conner/codePractice/rosDummy/install/robot_types/lib/python3.8/site-packages/robot_types/robot_types_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[33.128358] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/python3.8/site-packages/robot_types/robot_types_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[33.129217] (robot_types) StdoutLine: {'line': b'-- Set runtime path of "/home/conner/codePractice/rosDummy/install/robot_types/lib/python3.8/site-packages/robot_types/robot_types_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[33.129830] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__python.so\n'}
+[33.130475] (robot_types) StdoutLine: {'line': b'-- Set runtime path of "/home/conner/codePractice/rosDummy/install/robot_types/lib/librobot_types__python.so" to ""\n'}
+[33.130593] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/action/PID.idl\n'}
+[33.130716] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/action/PID.action\n'}
+[33.131196] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/ament_index/resource_index/package_run_dependencies/robot_types\n'}
+[33.131819] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/ament_index/resource_index/parent_prefix_path/robot_types\n'}
+[33.132812] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/environment/ament_prefix_path.sh\n'}
+[33.133080] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/environment/ament_prefix_path.dsv\n'}
+[33.133274] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/environment/path.sh\n'}
+[33.133612] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/environment/path.dsv\n'}
+[33.133774] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/local_setup.bash\n'}
+[33.134145] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/local_setup.sh\n'}
+[33.134338] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/local_setup.zsh\n'}
+[33.134480] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/local_setup.dsv\n'}
+[33.135032] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/package.dsv\n'}
+[33.135234] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/ament_index/resource_index/packages/robot_types\n'}
+[33.135686] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/robot_types__rosidl_generator_cExport.cmake\n'}
+[33.136239] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/robot_types__rosidl_generator_cExport-noconfig.cmake\n'}
+[33.136542] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/robot_types__rosidl_typesupport_introspection_cExport.cmake\n'}
+[33.136975] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/robot_types__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[33.137479] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/robot_types__rosidl_typesupport_cExport.cmake\n'}
+[33.137867] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/robot_types__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[33.139218] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/robot_types__rosidl_generator_cppExport.cmake\n'}
+[33.139403] (-) TimerEvent: {}
+[33.140673] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/robot_types__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[33.141651] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/robot_types__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[33.141887] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/robot_types__rosidl_typesupport_cppExport.cmake\n'}
+[33.142028] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/robot_types__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[33.142220] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/rosidl_cmake-extras.cmake\n'}
+[33.142760] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[33.143132] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[33.143631] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[33.143783] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[33.144248] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[33.144475] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[33.144921] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/robot_typesConfig.cmake\n'}
+[33.145060] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/cmake/robot_typesConfig-version.cmake\n'}
+[33.145183] (robot_types) StdoutLine: {'line': b'-- Installing: /home/conner/codePractice/rosDummy/install/robot_types/share/robot_types/package.xml\n'}
+[33.148721] (robot_types) CommandEnded: {'returncode': 0}
+[33.240309] (-) TimerEvent: {}
+[33.291404] (robot_types) JobEnded: {'identifier': 'robot_types', 'rc': 0}
+[33.295564] (-) EventReactorShutdown: {}

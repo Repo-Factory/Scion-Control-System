@@ -1,0 +1,31 @@
+[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:[m[K In member function ‘[01m[Kvoid Controller::PIDActionClient::result_callback(const WrappedResult&)[m[K’:
+[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:104:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[Kstd[m[K’
+  104 |     [01;31m[Kstd[m[K::cout << complete << std::endl;
+      |     [01;31m[K^~~[m[K
+[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:103:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcomplete[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  103 |     bool [01;35m[Kcomplete[m[K = result.result->complete
+      |          [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/class_loader/class_loader.hpp:56[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp_components/register_node_macro.hpp:18[m[K,
+                 from [01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:12[m[K:
+[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:[m[K At global scope:
+[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:112:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kaction_tutorials_cpp[m[K’ was not declared in this scope
+  112 | RCLCPP_COMPONENTS_REGISTER_NODE([01;31m[Kaction_tutorials_cpp[m[K::PIDActionClient)
+      |                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:112:1:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  112 | [01;31m[KRCLCPP_COMPONENTS_REGISTER_NODE[m[K(action_tutorials_cpp::PIDActionClient)
+      | [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/class_loader/class_loader_core.hpp:57[m[K,
+                 from [01m[K/opt/ros/foxy/include/class_loader/class_loader.hpp:55[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp_components/register_node_macro.hpp:18[m[K,
+                 from [01m[K/home/conner/codePractice/rosDummy/src/control_node/src/control_node.cpp:12[m[K:
+/opt/ros/foxy/include/class_loader/meta_object.hpp: In instantiation of ‘[01m[KB* class_loader::impl::MetaObject<C, B>::create() const [with C = int; B = rclcpp_components::NodeFactory][m[K’:
+[01m[K/opt/ros/foxy/include/class_loader/meta_object.hpp:216:7:[m[K   required from here
+[01m[K/opt/ros/foxy/include/class_loader/meta_object.hpp:218:12:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kint*[m[K’ to ‘[01m[Krclcpp_components::NodeFactory*[m[K’ in return
+  218 |     return [01;31m[Knew C[m[K;
+      |            [01;31m[K^~~~~[m[K
+      |            [01;31m[K|[m[K
+      |            [01;31m[Kint*[m[K
+make[2]: *** [CMakeFiles/action_client.dir/build.make:63: CMakeFiles/action_client.dir/src/control_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/action_client.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

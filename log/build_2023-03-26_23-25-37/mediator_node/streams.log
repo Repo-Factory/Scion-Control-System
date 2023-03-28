@@ -1,0 +1,29 @@
+[0.427s] Invoking command in '/home/conner/codePractice/rosDummy/build/mediator_node': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy LD_LIBRARY_PATH=/home/conner/codePractice/rosDummy/install/robot_types/lib:/home/conner/codePractice/rosDummy/install/mediator_node/lib:/home/conner/codePractice/rosDummy/install/control_node/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/mediator_node -- -j8 -l8
+[0.488s] [35m[1mScanning dependencies of target action_server[0m
+[0.519s] [ 50%] Built target pid_action_server
+[0.549s] [ 75%] [32mBuilding CXX object CMakeFiles/action_server.dir/src/mediator_node.cpp.o[0m
+[6.188s] [100%] [32m[1mLinking CXX shared library libaction_server.so[0m
+[6.824s] [100%] Built target action_server
+[6.856s] Invoked command in '/home/conner/codePractice/rosDummy/build/mediator_node' returned '0': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy LD_LIBRARY_PATH=/home/conner/codePractice/rosDummy/install/robot_types/lib:/home/conner/codePractice/rosDummy/install/mediator_node/lib:/home/conner/codePractice/rosDummy/install/control_node/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/mediator_node -- -j8 -l8
+[6.908s] Invoking command in '/home/conner/codePractice/rosDummy/build/mediator_node': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy LD_LIBRARY_PATH=/home/conner/codePractice/rosDummy/install/robot_types/lib:/home/conner/codePractice/rosDummy/install/mediator_node/lib:/home/conner/codePractice/rosDummy/install/control_node/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --install /home/conner/codePractice/rosDummy/build/mediator_node
+[6.918s] -- Install configuration: ""
+[6.919s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/lib/mediator_node/pid_action_server
+[6.920s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/lib/libaction_server.so
+[6.923s] -- Set runtime path of "/home/conner/codePractice/rosDummy/install/mediator_node/lib/libaction_server.so" to ""
+[6.924s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/package_run_dependencies/mediator_node
+[6.925s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/parent_prefix_path/mediator_node
+[6.926s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/ament_prefix_path.sh
+[6.926s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/ament_prefix_path.dsv
+[6.926s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/path.sh
+[6.926s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/environment/path.dsv
+[6.926s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.bash
+[6.927s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.sh
+[6.927s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.zsh
+[6.927s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/local_setup.dsv
+[6.927s] -- Installing: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/package.dsv
+[6.927s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/packages/mediator_node
+[6.927s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/ament_index/resource_index/rclcpp_components/mediator_node
+[6.928s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/cmake/mediator_nodeConfig.cmake
+[6.928s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/cmake/mediator_nodeConfig-version.cmake
+[6.928s] -- Up-to-date: /home/conner/codePractice/rosDummy/install/mediator_node/share/mediator_node/package.xml
+[6.938s] Invoked command in '/home/conner/codePractice/rosDummy/build/mediator_node' returned '0': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy LD_LIBRARY_PATH=/home/conner/codePractice/rosDummy/install/robot_types/lib:/home/conner/codePractice/rosDummy/install/mediator_node/lib:/home/conner/codePractice/rosDummy/install/control_node/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --install /home/conner/codePractice/rosDummy/build/mediator_node

@@ -1,0 +1,12 @@
+[0.319s] Invoking command in '/home/conner/codePractice/rosDummy/build/mediator_node': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy LD_LIBRARY_PATH=/home/conner/codePractice/rosDummy/install/robot_types/lib:/home/conner/codePractice/rosDummy/install/mediator_node/lib:/home/conner/codePractice/rosDummy/install/control_node/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/mediator_node -- -j8 -l8
+[0.395s] [35m[1mScanning dependencies of target action_server[0m
+[0.433s] [ 50%] Built target pid_action_server
+[0.461s] [ 75%] [32mBuilding CXX object CMakeFiles/action_server.dir/src/mediator_node.cpp.o[0m
+[3.212s] [01m[K/home/conner/codePractice/rosDummy/src/mediator_node/src/mediator_node.cpp:[m[K In member function ‘[01m[Kvoid Mediator::PIDActionServer::execute(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_types::action::PID> >)[m[K’:
+[3.212s] [01m[K/home/conner/codePractice/rosDummy/src/mediator_node/src/mediator_node.cpp:93:7:[m[K [01;31m[Kerror: [m[K‘[01m[KCheck[m[K’ was not declared in this scope
+[3.213s]    93 |       [01;31m[KCheck[m[K if there is a cancel request
+[3.213s]       |       [01;31m[K^~~~~[m[K
+[5.052s] make[2]: *** [CMakeFiles/action_server.dir/build.make:63: CMakeFiles/action_server.dir/src/mediator_node.cpp.o] Error 1
+[5.052s] make[1]: *** [CMakeFiles/Makefile2:161: CMakeFiles/action_server.dir/all] Error 2
+[5.053s] make: *** [Makefile:141: all] Error 2
+[5.060s] Invoked command in '/home/conner/codePractice/rosDummy/build/mediator_node' returned '2': CMAKE_PREFIX_PATH=/home/conner/codePractice/rosDummy/install/robot_types:/home/conner/codePractice/rosDummy/install/mediator_node:/home/conner/codePractice/rosDummy/install/control_node:/home/conner/codePractice/rosDummy/install/brain_node:/opt/ros/foxy LD_LIBRARY_PATH=/home/conner/codePractice/rosDummy/install/robot_types/lib:/home/conner/codePractice/rosDummy/install/mediator_node/lib:/home/conner/codePractice/rosDummy/install/control_node/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/conner/codePractice/rosDummy/build/mediator_node -- -j8 -l8
