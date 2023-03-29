@@ -3,13 +3,15 @@
 #include <thread>
 #include <vector>
 #include <iostream>
+
+#include "control_interface.hpp"
 #include "robot_types/action/pid.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "rclcpp_components/register_node_macro.hpp"
 
-using PID = robot_types::action::PID;
-using GoalHandlePID = rclcpp_action::ServerGoalHandle<PID>;
+using PIDAction = robot_types::action::PID;
+using GoalHandlePIDAction = rclcpp_action::ServerGoalHandle<PIDAction>;
 using namespace std::placeholders;
 
 
@@ -17,14 +19,14 @@ class Controller : public rclcpp::Node
 {
 public:
 
-  explicit Controller(const rclcpp::NodeOptions& options = rclcpp::NodeOptions())
-  : Node("PID_action_server", options)
+  explicit Controller()
+  : Node("Controller")
   {
 
-    this->action_server_ = rclcpp_action::create_server<PID>
+    this->action_server_ = rclcpp_action::create_server<PIDAction>
     (
       this,
-      "PID",
+      "PIDAction",
       std::bind(&Controller::handle_goal, this, _1, _2),
       std::bind(&Controller::handle_cancel, this, _1),
       std::bind(&Controller::handle_accepted, this, _1)
@@ -32,12 +34,12 @@ public:
   }
 
 private:
-  rclcpp_action::Server<PID>::SharedPtr action_server_;
+  rclcpp_action::Server<PIDAction>::SharedPtr action_server_;
 
   rclcpp_action::GoalResponse handle_goal
   (
     const rclcpp_action::GoalUUID& uuid,
-    std::shared_ptr<const PID::Goal> goal
+    std::shared_ptr<const PIDAction::Goal> goal
   )
   {
     RCLCPP_INFO(this->get_logger(), "Received goal request with order %d", goal->desired_state);
@@ -47,7 +49,7 @@ private:
 
   rclcpp_action::CancelResponse handle_cancel
   (
-    const std::shared_ptr<GoalHandlePID> goal_handle
+    const std::shared_ptr<GoalHandlePIDAction> goal_handle
   )
   {
     RCLCPP_INFO(this->get_logger(), "Received request to cancel goal");
@@ -57,7 +59,7 @@ private:
 
   void handle_accepted
   (
-    const std::shared_ptr<GoalHandlePID> goal_handle
+    const std::shared_ptr<GoalHandlePIDAction> goal_handle
   )
   {
     using namespace std::placeholders;
@@ -87,13 +89,13 @@ private:
     return equal;
   }
 
-  void execute(const std::shared_ptr<GoalHandlePID> goal_handle)
+  void execute(const std::shared_ptr<GoalHandlePIDAction> goal_handle)
   {
     RCLCPP_INFO(this->get_logger(), "Executing goal");
     rclcpp::Rate loop_rate(100);
 
-    std::shared_ptr<PID::Feedback> feedback = std::make_shared<PID::Feedback>();
-    std::shared_ptr<PID::Result> result = std::make_shared<PID::Result>();
+    std::shared_ptr<PIDAction::Feedback> feedback = std::make_shared<PIDAction::Feedback>();
+    std::shared_ptr<PIDAction::Result> result = std::make_shared<PIDAction::Result>();
     const auto goal = goal_handle->get_goal();
 
     std::vector<float>& state = feedback->ongoing_state;
@@ -137,5 +139,10 @@ private:
   }
 };  // class Controller
 
-
-RCLCPP_COMPONENTS_REGISTER_NODE(Controller)
+int main(int argc, char * argv[])
+{
+  rclcpp::init(argc, argv);
+  rclcpp::spin(std::make_shared<Controller>());
+  rclcpp::shutdown();
+  return 0;
+}

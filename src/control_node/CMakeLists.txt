@@ -25,22 +25,18 @@ find_package(robot_types REQUIRED)
 find_package(rclcpp_action REQUIRED)
 find_package(rclcpp_components REQUIRED)
 
+add_executable(control_exec src/control_node.cpp)
 
-add_library(action_server SHARED
-  src/control_node.cpp)
-target_include_directories(action_server PRIVATE
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
+target_include_directories(control_exec PUBLIC ../control_interface/include)
 
-ament_target_dependencies(action_server
+ament_target_dependencies(control_exec
   "robot_types"
   "rclcpp"
   "rclcpp_action"
   "rclcpp_components")
   
-rclcpp_components_register_node(action_server PLUGIN "PIDActionServer" EXECUTABLE control_exec)
 install(TARGETS
-  action_server
+  control_exec
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin)

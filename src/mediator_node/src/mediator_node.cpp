@@ -5,53 +5,59 @@
 #include <sstream>
 #include <vector>
 #include <iostream>
-#include <unistd.h>  
+#include <unistd.h>
+#include <deque>
+
 #include "robot_types/action/pid.hpp"
 
+#include "control_interface.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "rclcpp_components/register_node_macro.hpp"
 
+using PIDAction = robot_types::action::PID;
+using GoalHandlePIDAction = rclcpp_action::ClientGoalHandle<PIDAction>;
 
 class Mediator : public rclcpp::Node
 {
 public:
-  using PID = robot_types::action::PID;
-  using GoalHandlePID = rclcpp_action::ClientGoalHandle<PID>;
-
-  explicit Mediator(const rclcpp::NodeOptions & options)
-  : Node("PID_action_client", options)
+  explicit Mediator()
+  : Node("Mediator")
   {
-    this->client_ptr_ = rclcpp_action::create_client<PID>(
+    this->client_ptr_ = rclcpp_action::create_client<PIDAction>
+    (
       this,
-      "PID");
+      "PIDAction"
+    );
 
-    this->timer_ = this->create_wall_timer(
-      std::chrono::milliseconds(4000),
-      std::bind(&Mediator::send_goal, this));
+    this->timer_ = this->create_wall_timer
+    (
+      std::chrono::milliseconds(100), 
+      std::bind(&Mediator::nextCommand, this)
+    );
 
-    this->cancel_timer_ = this->create_wall_timer(
-      std::chrono::milliseconds(6000),
-      std::bind(&Mediator::cancel_goal, this));
+    // this->timer_ = this->create_wall_timer(
+    //   std::chrono::milliseconds(4000),
+    //   std::bind(&Mediator::send_goal, this));
+
+    // this->cancel_timer_ = this->create_wall_timer(
+    //   std::chrono::milliseconds(6000),
+    //   std::bind(&Mediator::cancel_goal, this));
   }
 
-  void send_goal()
+  void send_goal(Interface::desired_state_t& desired)
   {
     using namespace std::placeholders;
-
-    // this->timer_->cancel();
-
-    if (!this->client_ptr_->wait_for_action_server()) {
+    if (!this->client_ptr_->wait_for_action_server()) 
+    {
       RCLCPP_ERROR(this->get_logger(), "Action server not available after waiting");
       rclcpp::shutdown();
     }
-
-    auto goal_msg = PID::Goal();
-    goal_msg.desired_state = std::vector<float>{10.0F,10.0F,10.0F,10.0F,10.0F,10.0F};
-
+    auto goal_msg = PIDAction::Goal();
+    goal_msg.desired_state = desired;
     RCLCPP_INFO(this->get_logger(), "Sending goal");
 
-    auto send_goal_options = rclcpp_action::Client<PID>::SendGoalOptions();
+    auto send_goal_options = rclcpp_action::Client<PIDAction>::SendGoalOptions();
     send_goal_options.goal_response_callback = std::bind(&Mediator::goal_response_callback, this, _1);
     send_goal_options.feedback_callback = std::bind(&Mediator::feedback_callback, this, _1, _2);
     send_goal_options.result_callback = std::bind(&Mediator::result_callback, this, _1);
@@ -61,19 +67,21 @@ public:
   void cancel_goal()
   {
     using namespace std::placeholders;
-    auto cancel_goal_options = rclcpp_action::Client<PID>::CancelRequest();
+    auto cancel_goal_options = rclcpp_action::Client<PIDAction>::CancelRequest();
     this->client_ptr_->async_cancel_all_goals();
   }
   
 
 private:
-  rclcpp_action::Client<PID>::SharedPtr client_ptr_;
+  rclcpp_action::Client<PIDAction>::SharedPtr client_ptr_;
   rclcpp::TimerBase::SharedPtr timer_;
-  rclcpp::TimerBase::SharedPtr cancel_timer_;
+  // rclcpp::TimerBase::SharedPtr cancel_timer_;
+  deque<Interface::Command> command_queue_;
+  Interface::Command* current_command_; 
 
   void goal_response_callback
   (
-    std::shared_future<GoalHandlePID::SharedPtr> future
+    std::shared_future<GoalHandlePIDAction::SharedPtr> future
   )
   {
     auto goal_handle = future.get();
@@ -86,7 +94,7 @@ private:
 
   void feedback_callback
   (
-    GoalHandlePID::SharedPtr, const std::shared_ptr<const PID::Feedback> feedback
+    GoalHandlePIDAction::SharedPtr, const std::shared_ptr<const PIDAction::Feedback> feedback
   )
   {
     // std::stringstream ss;
@@ -99,10 +107,11 @@ private:
 
   void result_callback
   (
-    const GoalHandlePID::WrappedResult & result
+    const GoalHandlePIDAction::WrappedResult & result
   )
   {
-    switch (result.code) {
+    switch (result.code) 
+    {
       case rclcpp_action::ResultCode::SUCCEEDED:
         break;
       case rclcpp_action::ResultCode::ABORTED:
@@ -116,19 +125,50 @@ private:
         return;
     }
 
+    /* SUCCESS STATE */
     std::stringstream ss;
-    ss << "State Accomplished: ";
-    std::vector<float>& complete = result.result->current_state; 
-    for (float element : complete)
-    {
-        ss << element << " ";
-    }
+    ss << "State Accomplished; Setting Current Command to Null\n";
+    current_command_ = nullptr;
     RCLCPP_INFO(this->get_logger(), ss.str().c_str());
-    std::cout << "Done! \n";
+    std::cout << "New! \n";
     sleep(1);
-    std::cout << "Waited! \n";
+    std::cout << "Thing! \n";
 
   }
+
+  void nextCommand()
+  {
+    if (this->command_queue_.size() > 0 && current_command_ == nullptr)
+    {
+      this->current_command_ = &command_queue_[0];
+      this->command_queue_.pop_front();
+      
+      Interface::simple_movement_func func = current_command_->function.movement;
+      Interface::desired_state_t desired = (*func)();
+      this->send_goal(desired);
+    }
+  }
+
+  void populateQueue()
+  {
+    Interface::Command command1;
+    command1.function.movement = &Interface::count;
+    Interface::Command command2;
+    command2.function.movement = &Interface::count;
+    Interface::Command command3;
+    command3.function.movement = &Interface::count;
+
+    this->command_queue_.push_back(command1);
+    this->command_queue_.push_back(command2);
+    this->command_queue_.push_back(command3);
+  }
+
 };  // class Mediator
 
-RCLCPP_COMPONENTS_REGISTER_NODE(Mediator)
+int main(int argc, char * argv[])
+{
+  rclcpp::init(argc, argv);
+  rclcpp::spin(std::make_shared<Mediator>());
+  rclcpp::shutdown();
+  return 0;
+}

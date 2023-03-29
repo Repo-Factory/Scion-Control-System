@@ -57,4 +57,9 @@ namespace Interface
         cout << "Move" << degree << endl;
         return desired_state_t{0,0,0,0,0,0};
     }
+
+    desired_state_t count()
+    {
+        return desired_state_t{8.0F, 8.0F, 8.0F, 8.0F, 8.0F, 8.0F};
+    }
 }
