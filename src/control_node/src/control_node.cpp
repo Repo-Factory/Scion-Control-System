@@ -3,9 +3,12 @@
 #include <thread>
 #include <vector>
 #include <iostream>
+#include <future>
+#include <unistd.h>
 
-#include "control_interface.hpp"
+#include "control_interface.hpp"        // Interface:: namespace for robot functions and type definitions
 #include "robot_types/action/pid.hpp"
+#include "robot_types/msg/idea.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "rclcpp_components/register_node_macro.hpp"
@@ -31,10 +34,98 @@ public:
       std::bind(&Controller::handle_cancel, this, _1),
       std::bind(&Controller::handle_accepted, this, _1)
     );
+
+    this->timer_ = create_wall_timer
+    (
+      std::chrono::milliseconds(1000), std::bind(&Controller::desiredIsValid, this)
+    );
+
+    idea_sub_ = this->create_subscription<robot_types::msg::Idea>
+    (
+      "brain_idea_data",
+       10,
+       std::bind(&Controller::translateIdea, this, _1)
+    );
+
+    // auto func = std::bind(&Controller::initCurrentState, this);
+    // std::thread(func).detach();
+
+    // initDesiredState(desired_state_);
+
+    // desired_state_valid_ = true;
+
   }
 
 private:
   rclcpp_action::Server<PIDAction>::SharedPtr action_server_;
+  rclcpp::Subscription<robot_types::msg::Idea>::SharedPtr idea_sub_;
+  rclcpp::TimerBase::SharedPtr timer_;
+  Interface::current_state_t current_state_ = Interface::current_state_t{0,0,0,0,0,0};
+  Interface::desired_state_t desired_state_ = Interface::desired_state_t{0,0,0,0,0,0};
+  bool curr_state_valid_ = false;
+  bool desired_state_valid_ = false;
+
+  void translateIdea(robot_types::msg::Idea::SharedPtr idea)
+  {
+    using namespace Interface;
+    switch (idea->code)
+    {
+      case Idea::STOP:
+        Interface::stop();
+      case Idea::GO:
+        Interface::go(idea->parameters[0]);
+      case Idea::MOVE:
+
+    }
+  }
+
+  void desiredIsValid()
+  {
+    if (desired_state_valid_ == true)
+    {
+      std::cout << "Desired State is Valid\n"; 
+    }
+  }
+
+  void initCurrentState()
+  {
+    sleep(5);
+    curr_state_valid_ = true;
+    this->current_state_ = Interface::current_state_t{1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
+    return;
+  }
+
+  bool currentInitValid()
+  {
+    while (!curr_state_valid_)
+    {
+      sleep(.1);
+    }
+    return true;
+  }
+
+  void initDesiredState(Interface::desired_state_t& desired_state)
+  {
+    auto func = std::bind(&Controller::currentInitValid, this);
+    std::future<bool> fut = std::async(func);
+
+    std::cout << "Waiting for Valid Sensor Info.\n";
+
+    bool valid = fut.get();      // waits for currentInitValid to return
+
+    if (valid)
+    {
+      desired_state = this->current_state_;
+    } 
+
+    std::stringstream ss;
+    for (float element : desired_state)
+    {
+      ss << element << " ";
+    }
+
+    RCLCPP_INFO(this->get_logger(), ss.str().c_str());
+  }
 
   rclcpp_action::GoalResponse handle_goal
   (

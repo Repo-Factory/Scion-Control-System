@@ -29,25 +29,39 @@ public:
       "PIDAction"
     );
 
-    this->populateQueue();
-    
-    current_command_ = nullptr;
+    idea_sub_ = this->create_subscription<robot_types::msg::Idea>
+    (
+      "brain_idea_data",
+       10,
+       std::bind(&Controller::translateIdea, this, _1)
+    );
 
+    this->populateQueue();
+    current_command_ = nullptr;
     this->timer_ = this->create_wall_timer
     (
       std::chrono::milliseconds(100), 
       std::bind(&Mediator::nextCommand, this)
     );
 
-
-    // this->timer_ = this->create_wall_timer(
-    //   std::chrono::milliseconds(4000),
-    //   std::bind(&Mediator::send_goal, this));
-
-    // this->cancel_timer_ = this->create_wall_timer(
-    //   std::chrono::milliseconds(6000),
-    //   std::bind(&Mediator::cancel_goal, this));
   }
+
+
+  void translateIdea(robot_types::msg::Idea::SharedPtr idea)
+    {
+      using namespace Interface;
+      switch (idea->code)
+      {
+        case Idea::STOP:
+          Interface::stop();
+        case Idea::GO:
+          Interface::go(idea->parameters[0]);
+        case Idea::MOVE:
+
+      }
+    }
+
+
 
   void send_goal(Interface::desired_state_t& desired)
   {
@@ -79,6 +93,8 @@ public:
 private:
   rclcpp_action::Client<PIDAction>::SharedPtr client_ptr_;
   rclcpp::TimerBase::SharedPtr timer_;
+  rclcpp::Subscription<robot_types::msg::Idea>::SharedPtr idea_sub_;
+
   // rclcpp::TimerBase::SharedPtr cancel_timer_;
   std::deque<Interface::Command> command_queue_;
   Interface::Command* current_command_; 
@@ -143,7 +159,7 @@ private:
   void nextCommand()
   {
     using namespace Interface;
-    if (this->command_queue_.size() > 0 && current_command_ == nullptr)
+    if (this->command_queue_.size() > 0 && current_command_ == nullptr) // && controlInit == true
     {
       this->current_command_ = &command_queue_[0];
       this->command_queue_.pop_front();

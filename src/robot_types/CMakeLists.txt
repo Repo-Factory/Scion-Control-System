@@ -21,6 +21,7 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "action/PID.action"
+  "msg/Idea.msg"
 )
 
 ament_package()

@@ -20,16 +20,23 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(robot_types REQUIRED)
+find_package(rclcpp_action REQUIRED)
+find_package(rclcpp_components REQUIRED)
 
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  # the following line skips the linter which checks for copyrights
-  # uncomment the line when a copyright and license is not present in all source files
-  #set(ament_cmake_copyright_FOUND TRUE)
-  # the following line skips cpplint (only works in a git repo)
-  # uncomment the line when this package is not in a git repo
-  #set(ament_cmake_cpplint_FOUND TRUE)
-  ament_lint_auto_find_test_dependencies()
-endif()
+add_executable(brain_exec src/brain_node.cpp)
+
+ament_target_dependencies(brain_exec
+"robot_types"
+"rclcpp"
+"rclcpp_action"
+"rclcpp_components")
+
+target_include_directories(brain_exec PUBLIC ../control_interface/include)
+
+install(TARGETS
+  brain_exec
+  DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
