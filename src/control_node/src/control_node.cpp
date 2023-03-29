@@ -1,137 +1,141 @@
 #include <functional>
-#include <future>
 #include <memory>
-#include <string>
-#include <sstream>
+#include <thread>
 #include <vector>
 #include <iostream>
-#include <unistd.h>  
 #include "robot_types/action/pid.hpp"
-
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "rclcpp_components/register_node_macro.hpp"
 
-namespace Controller
-{
-class PIDActionClient : public rclcpp::Node
+using PID = robot_types::action::PID;
+using GoalHandlePID = rclcpp_action::ServerGoalHandle<PID>;
+using namespace std::placeholders;
+
+
+class Controller : public rclcpp::Node
 {
 public:
-  using PID = robot_types::action::PID;
-  using GoalHandlePID = rclcpp_action::ClientGoalHandle<PID>;
 
-  explicit PIDActionClient(const rclcpp::NodeOptions & options)
-  : Node("PID_action_client", options)
+  explicit Controller(const rclcpp::NodeOptions& options = rclcpp::NodeOptions())
+  : Node("PID_action_server", options)
   {
-    this->client_ptr_ = rclcpp_action::create_client<PID>(
+
+    this->action_server_ = rclcpp_action::create_server<PID>
+    (
       this,
-      "PID");
-
-    this->timer_ = this->create_wall_timer(
-      std::chrono::milliseconds(4000),
-      std::bind(&PIDActionClient::send_goal, this));
-
-    this->cancel_timer_ = this->create_wall_timer(
-      std::chrono::milliseconds(6000),
-      std::bind(&PIDActionClient::cancel_goal, this));
+      "PID",
+      std::bind(&Controller::handle_goal, this, _1, _2),
+      std::bind(&Controller::handle_cancel, this, _1),
+      std::bind(&Controller::handle_accepted, this, _1)
+    );
   }
-
-  void send_goal()
-  {
-    using namespace std::placeholders;
-
-    // this->timer_->cancel();
-
-    if (!this->client_ptr_->wait_for_action_server()) {
-      RCLCPP_ERROR(this->get_logger(), "Action server not available after waiting");
-      rclcpp::shutdown();
-    }
-
-    auto goal_msg = PID::Goal();
-    goal_msg.desired_state = std::vector<float>{10.0F,10.0F,10.0F,10.0F,10.0F,10.0F};
-
-    RCLCPP_INFO(this->get_logger(), "Sending goal");
-
-    auto send_goal_options = rclcpp_action::Client<PID>::SendGoalOptions();
-    send_goal_options.goal_response_callback = std::bind(&PIDActionClient::goal_response_callback, this, _1);
-    send_goal_options.feedback_callback = std::bind(&PIDActionClient::feedback_callback, this, _1, _2);
-    send_goal_options.result_callback = std::bind(&PIDActionClient::result_callback, this, _1);
-    this->client_ptr_->async_send_goal(goal_msg, send_goal_options);
-  }
-
-  void cancel_goal()
-  {
-    using namespace std::placeholders;
-    auto cancel_goal_options = rclcpp_action::Client<PID>::CancelRequest();
-    this->client_ptr_->async_cancel_all_goals();
-  }
-  
 
 private:
-  rclcpp_action::Client<PID>::SharedPtr client_ptr_;
-  rclcpp::TimerBase::SharedPtr timer_;
-  rclcpp::TimerBase::SharedPtr cancel_timer_;
+  rclcpp_action::Server<PID>::SharedPtr action_server_;
 
-  void goal_response_callback
+  rclcpp_action::GoalResponse handle_goal
   (
-    std::shared_future<GoalHandlePID::SharedPtr> future
+    const rclcpp_action::GoalUUID& uuid,
+    std::shared_ptr<const PID::Goal> goal
   )
   {
-    auto goal_handle = future.get();
-    if (!goal_handle) {
-      RCLCPP_ERROR(this->get_logger(), "Goal was rejected by server");
-    } else {
-      RCLCPP_INFO(this->get_logger(), "Goal accepted by server, waiting for result");
-    }
+    RCLCPP_INFO(this->get_logger(), "Received goal request with order %d", goal->desired_state);
+    (void)uuid;
+    return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
   }
 
-  void feedback_callback
+  rclcpp_action::CancelResponse handle_cancel
   (
-    GoalHandlePID::SharedPtr, const std::shared_ptr<const PID::Feedback> feedback
+    const std::shared_ptr<GoalHandlePID> goal_handle
   )
   {
-    // std::stringstream ss;
-    // ss << "Current State: ";
-    // for (float element : feedback->ongoing_state) {
-    //   ss << element << " ";
-    // }
-    // RCLCPP_INFO(this->get_logger(), ss.str().c_str());
+    RCLCPP_INFO(this->get_logger(), "Received request to cancel goal");
+    (void)goal_handle;
+    return rclcpp_action::CancelResponse::ACCEPT;
   }
 
-  void result_callback
+  void handle_accepted
   (
-    const GoalHandlePID::WrappedResult & result
+    const std::shared_ptr<GoalHandlePID> goal_handle
   )
   {
-    switch (result.code) {
-      case rclcpp_action::ResultCode::SUCCEEDED:
-        break;
-      case rclcpp_action::ResultCode::ABORTED:
-        RCLCPP_ERROR(this->get_logger(), "Goal was aborted");
-        return;
-      case rclcpp_action::ResultCode::CANCELED:
-        RCLCPP_ERROR(this->get_logger(), "Goal was canceled");
-        return;
-      default:
-        RCLCPP_ERROR(this->get_logger(), "Unknown result code");
-        return;
-    }
+    using namespace std::placeholders;
+    // this needs to return quickly to avoid blocking the executor, so spin up a new thread
+    std::thread{std::bind(&Controller::execute, this, _1), goal_handle}.detach();
+  }
 
-    std::stringstream ss;
-    ss << "State Accomplished: ";
-    std::vector<float>& complete = result.result->current_state; 
-    for (float element : complete)
+  ///////////////////////////////////////////////////////////////////////////////
+                                // FUNCTIONALITY //  
+  ///////////////////////////////////////////////////////////////////////////////
+
+  bool areEqual(float float1, float float2, float epsilon)
+  {
+    return (fabs(float1 - float2) < epsilon);
+  }
+
+  bool areEqual(std::vector<float>& current_state, std::vector<float>& desired_state)
+  {
+    bool equal = true;
+    for (std::vector<float>::size_type i = 0; i < current_state.size(); i++)
     {
-        ss << element << " ";
+        if (!areEqual(current_state[i], desired_state[i], (.005F*desired_state[i])))
+        {
+            equal = false;
+        }
     }
-    RCLCPP_INFO(this->get_logger(), ss.str().c_str());
-    std::cout << "Done! \n";
-    sleep(1);
-    std::cout << "Waited! \n";
+    return equal;
+  }
+
+  void execute(const std::shared_ptr<GoalHandlePID> goal_handle)
+  {
+    RCLCPP_INFO(this->get_logger(), "Executing goal");
+    rclcpp::Rate loop_rate(100);
+
+    std::shared_ptr<PID::Feedback> feedback = std::make_shared<PID::Feedback>();
+    std::shared_ptr<PID::Result> result = std::make_shared<PID::Result>();
+    const auto goal = goal_handle->get_goal();
+
+    std::vector<float>& state = feedback->ongoing_state;
+    state.push_back(0.0F);
+    state.push_back(0.0F);
+    state.push_back(0.0F);
+    state.push_back(0.0F);
+    state.push_back(0.0F);
+    state.push_back(0.0F);
+    
+    std::vector<float> desired_state = goal->desired_state;
+
+    while (!areEqual(state, desired_state)) {
+    //   Check if there is a cancel request
+      if (goal_handle->is_canceling()) {
+        result->current_state = state;
+        goal_handle->canceled(result);
+        RCLCPP_INFO(this->get_logger(), "Goal canceled");
+        return;
+      }
+      std::stringstream ss;
+      // Update sequence
+      for (float& element : state)
+      {
+        element += .1;
+        // ss << element << " ";
+      }
+      // Publish feedback
+      goal_handle->publish_feedback(feedback);
+      RCLCPP_INFO(this->get_logger(), "Publish feedback");
+
+      loop_rate.sleep();
+
+    }
+    // Check if goal is done
+    if (rclcpp::ok()) {
+      goal_handle->succeed(result);
+      RCLCPP_INFO(this->get_logger(), "Goal succeeded");
+    }
 
   }
-};  // class PIDActionClient
+};  // class Controller
 
-}  // namespace action_tutorials_cpp
 
-RCLCPP_COMPONENTS_REGISTER_NODE(Controller::PIDActionClient)
+RCLCPP_COMPONENTS_REGISTER_NODE(Controller)

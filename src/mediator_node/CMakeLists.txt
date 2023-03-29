@@ -15,9 +15,9 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-add_library(action_server SHARED
+add_library(action_client SHARED
   src/mediator_node.cpp)
-target_include_directories(action_server PRIVATE
+target_include_directories(action_client PRIVATE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)
 
@@ -28,15 +28,15 @@ find_package(robot_types REQUIRED)
 find_package(rclcpp_action REQUIRED)
 find_package(rclcpp_components REQUIRED)
 
-ament_target_dependencies(action_server
+ament_target_dependencies(action_client
   "robot_types"
   "rclcpp"
   "rclcpp_action"
   "rclcpp_components")
 
-rclcpp_components_register_node(action_server PLUGIN "Mediator::PIDActionServer" EXECUTABLE pid_action_server)
+rclcpp_components_register_node(action_client PLUGIN "PIDActionClient" EXECUTABLE mediator_exec)
 install(TARGETS
-  action_server
+  action_client
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin)
