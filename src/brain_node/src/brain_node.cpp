@@ -1,4 +1,5 @@
 #include <vector>
+#include <unistd.h>
 
 #include "robot_types/action/pid.hpp"
 #include "robot_types/msg/idea.hpp"
@@ -64,6 +65,15 @@ class Brain : public rclcpp::Node
             using namespace Interface;
             for (idea_message_t& idea_message : idea_sequence)
             {
+                std::cout << idea_message.code << std::endl;
+                for (float parameter : idea_message.parameters)
+                {
+                    std::cout << parameter << std::endl;
+                } 
+            }
+            for (idea_message_t& idea_message : idea_sequence)
+            {
+                sleep(.1);
                 this->idea_pub_->publish(idea_message);
             }
             RCLCPP_INFO(this->get_logger(), "Publishing Idea" );

@@ -80,8 +80,8 @@ public:
           // break;
         case Idea::RELATIVE_POINT:
           command_vector = Translator::relativePoint(idea->parameters[0], idea->parameters[1]);
-          // break;
           addToQueue(command_vector);
+          // break;
         case Idea::ABSOLUTE_POINT:
           Translator::absolutePoint(idea->parameters[0], idea->parameters[1]);
           // break;
