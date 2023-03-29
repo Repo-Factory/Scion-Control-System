@@ -15,13 +15,12 @@ namespace Interface
     struct Command;
 
     /* Custom Types to Use In Control System */
-    typedef std::vector<float>                              current_state_t;
-    typedef std::vector<float>                              desired_state_t;
-    typedef robot_types::msg::Idea                          idea_message_t;
-    typedef std::deque<Command>                             command_queue_t;
-    typedef std::vector<robot_types::msg::Idea>             idea_vector_t;
-    typedef std::vector<Command>                            command_vector_t;
-    typedef std::unordered_map<int, std::string>            ModeMap;
+    typedef std::vector<float>                                  current_state_t;
+    typedef std::vector<float>                                  desired_state_t;
+    typedef robot_types::msg::Idea                              idea_message_t;
+    typedef std::vector<robot_types::msg::Idea>                 idea_vector_t;
+    typedef std::deque<Command>                                 command_queue_t;
+    typedef std::vector<Command>                                command_vector_t;
 
     /* Function Pointers That Point to Different Commands for Robot */
     typedef desired_state_t (*state_transform_func)(float); //, current_state_t&
@@ -58,7 +57,7 @@ namespace Interface
     union Params
     {
         float degree;
-        // std::vector<float> list;
+        std::vector<float>* listPtr;
         void* nothing = nullptr;
     }; 
 

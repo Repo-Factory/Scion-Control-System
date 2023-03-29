@@ -41,7 +41,7 @@ class Brain : public rclcpp::Node
 
         void make_decision()
         {
-
+            std::cout << "Making A Decision" << std::endl;
         }
 
         void initSequence(Interface::idea_vector_t& idea_sequence)
@@ -62,7 +62,7 @@ class Brain : public rclcpp::Node
         void publishSequence(Interface::idea_vector_t& idea_sequence)
         {   
             using namespace Interface;
-            for (idea_message_t idea_message : idea_sequence)
+            for (idea_message_t& idea_message : idea_sequence)
             {
                 this->idea_pub_->publish(idea_message);
             }
