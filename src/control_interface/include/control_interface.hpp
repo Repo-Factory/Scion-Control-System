@@ -1,12 +1,10 @@
 #include <vector>
 #include <iostream>
 
-using namespace std;
-
 namespace Interface
 {
-    typedef vector<float> current_state_t;
-    typedef vector<float> desired_state_t;
+    typedef std::vector<float> current_state_t;
+    typedef std::vector<float> desired_state_t;
     typedef desired_state_t (*state_transform_func)(float, current_state_t&);
     typedef desired_state_t (*simple_movement_func)();
 
@@ -18,48 +16,48 @@ namespace Interface
 
     struct Command
     {
-        Function function;                                                  // Points to a function to execute          (turn)
-        float degree;                                                       // The magnitude to pass into that function (30 degrees)
+        Function function;          // Points to a function to execute          (turn)
+        float degree;               // The magnitude to pass into that function (30 degrees)
     };
 
     desired_state_t stop()
     {
-        cout << "Stop" << endl;
+        std::cout << "Stop" << std::endl;
         return desired_state_t{0,0,0,0,0,0};
     }
 
     desired_state_t spin()
     {
-        cout << "Turn" << endl;
+        std::cout << "Turn" << std::endl;
         return desired_state_t{0,0,0,0,0,0};
     }
 
     desired_state_t pitch()
     {
-        cout << "Pitch" << endl;
+        std::cout << "Pitch" << std::endl;
         return desired_state_t{0,0,0,0,0,0};
     }
 
     desired_state_t go()
     {
-        cout << "Move" << endl;
+        std::cout << "Move" << std::endl;
         return desired_state_t{0,0,0,0,0,0};
     }
 
     desired_state_t turn(float degree, current_state_t& current_state)
     {
-        cout << "Turn" << degree << endl;
+        std::cout << "Turn" << degree << std::endl;
         return desired_state_t{0,0,0,0,0,0};
     }
 
     desired_state_t move(float degree, current_state_t& current_state)
     {
-        cout << "Move" << degree << endl;
+        std::cout << "Move" << degree << std::endl;
         return desired_state_t{0,0,0,0,0,0};
     }
 
     desired_state_t count()
     {
-        return desired_state_t{8.0F, 8.0F, 8.0F, 8.0F, 8.0F, 8.0F};
+        return desired_state_t{80.0F, 80.0F, 80.0F, 80.0F, 80.0F, 80.0F};
     }
 }

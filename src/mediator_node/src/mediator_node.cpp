@@ -9,7 +9,6 @@
 #include <deque>
 
 #include "robot_types/action/pid.hpp"
-
 #include "control_interface.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
@@ -30,11 +29,16 @@ public:
       "PIDAction"
     );
 
+    this->populateQueue();
+    
+    current_command_ = nullptr;
+
     this->timer_ = this->create_wall_timer
     (
       std::chrono::milliseconds(100), 
       std::bind(&Mediator::nextCommand, this)
     );
+
 
     // this->timer_ = this->create_wall_timer(
     //   std::chrono::milliseconds(4000),
@@ -76,7 +80,7 @@ private:
   rclcpp_action::Client<PIDAction>::SharedPtr client_ptr_;
   rclcpp::TimerBase::SharedPtr timer_;
   // rclcpp::TimerBase::SharedPtr cancel_timer_;
-  deque<Interface::Command> command_queue_;
+  std::deque<Interface::Command> command_queue_;
   Interface::Command* current_command_; 
 
   void goal_response_callback
@@ -131,32 +135,34 @@ private:
     current_command_ = nullptr;
     RCLCPP_INFO(this->get_logger(), ss.str().c_str());
     std::cout << "New! \n";
-    sleep(1);
+    sleep(.005);
     std::cout << "Thing! \n";
 
   }
 
   void nextCommand()
   {
+    using namespace Interface;
     if (this->command_queue_.size() > 0 && current_command_ == nullptr)
     {
       this->current_command_ = &command_queue_[0];
       this->command_queue_.pop_front();
       
-      Interface::simple_movement_func func = current_command_->function.movement;
-      Interface::desired_state_t desired = (*func)();
+      simple_movement_func func = current_command_->function.movement;
+      desired_state_t desired = (*func)();
       this->send_goal(desired);
     }
   }
 
   void populateQueue()
   {
-    Interface::Command command1;
-    command1.function.movement = &Interface::count;
-    Interface::Command command2;
-    command2.function.movement = &Interface::count;
-    Interface::Command command3;
-    command3.function.movement = &Interface::count;
+    using namespace Interface;
+    Command command1;
+    command1.function.movement = &count;
+    Command command2;
+    command2.function.movement = &count;
+    Command command3;
+    command3.function.movement = &count;
 
     this->command_queue_.push_back(command1);
     this->command_queue_.push_back(command2);

@@ -24,18 +24,20 @@ find_package(rclcpp_components REQUIRED)
 
 add_executable(mediator_exec src/mediator_node.cpp)
 
-target_include_directories(mediator_exec PUBLIC ../control_interface/include)
-
 ament_target_dependencies(mediator_exec
-  "robot_types"
-  "rclcpp"
-  "rclcpp_action"
-  "rclcpp_components")
+"robot_types"
+"rclcpp"
+"rclcpp_action"
+"rclcpp_components")
+
+target_include_directories(mediator_exec PUBLIC ../control_interface/include)
 
 install(TARGETS
   mediator_exec
-  ARCHIVE DESTINATION lib
-  LIBRARY DESTINATION lib
-  RUNTIME DESTINATION bin)
+  DESTINATION lib/${PROJECT_NAME}
+)
+  # ARCHIVE DESTINATION lib
+  # LIBRARY DESTINATION lib
+  # RUNTIME DESTINATION bin)
 
 ament_package()

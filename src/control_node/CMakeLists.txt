@@ -27,18 +27,20 @@ find_package(rclcpp_components REQUIRED)
 
 add_executable(control_exec src/control_node.cpp)
 
+ament_target_dependencies(control_exec
+"robot_types"
+"rclcpp"
+"rclcpp_action"
+"rclcpp_components")
+
 target_include_directories(control_exec PUBLIC ../control_interface/include)
 
-ament_target_dependencies(control_exec
-  "robot_types"
-  "rclcpp"
-  "rclcpp_action"
-  "rclcpp_components")
-  
 install(TARGETS
   control_exec
-  ARCHIVE DESTINATION lib
-  LIBRARY DESTINATION lib
-  RUNTIME DESTINATION bin)
+  DESTINATION lib/${PROJECT_NAME}
+ )
+  # ARCHIVE DESTINATION lib
+  # LIBRARY DESTINATION lib
+  # RUNTIME DESTINATION bin)
 
 ament_package()
