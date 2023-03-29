@@ -35,17 +35,12 @@ public:
       std::bind(&Controller::handle_accepted, this, _1)
     );
 
-    this->timer_ = create_wall_timer
-    (
-      std::chrono::milliseconds(1000), std::bind(&Controller::desiredIsValid, this)
-    );
+    // this->timer_ = create_wall_timer
+    // (
+    //   std::chrono::milliseconds(1000), std::bind(&Controller::desiredIsValid, this)
+    // );
 
-    idea_sub_ = this->create_subscription<robot_types::msg::Idea>
-    (
-      "brain_idea_data",
-       10,
-       std::bind(&Controller::translateIdea, this, _1)
-    );
+    
 
     // auto func = std::bind(&Controller::initCurrentState, this);
     // std::thread(func).detach();
@@ -58,74 +53,60 @@ public:
 
 private:
   rclcpp_action::Server<PIDAction>::SharedPtr action_server_;
-  rclcpp::Subscription<robot_types::msg::Idea>::SharedPtr idea_sub_;
   rclcpp::TimerBase::SharedPtr timer_;
   Interface::current_state_t current_state_ = Interface::current_state_t{0,0,0,0,0,0};
   Interface::desired_state_t desired_state_ = Interface::desired_state_t{0,0,0,0,0,0};
   bool curr_state_valid_ = false;
   bool desired_state_valid_ = false;
 
-  void translateIdea(robot_types::msg::Idea::SharedPtr idea)
-  {
-    using namespace Interface;
-    switch (idea->code)
-    {
-      case Idea::STOP:
-        Interface::stop();
-      case Idea::GO:
-        Interface::go(idea->parameters[0]);
-      case Idea::MOVE:
+  
+  // void desiredIsValid()
+  // {
+  //   if (desired_state_valid_ == true)
+  //   {
+  //     std::cout << "Desired State is Valid\n"; 
+  //   }
+  // }
 
-    }
-  }
+  // void initCurrentState()
+  // {
+  //   sleep(5);
+  //   curr_state_valid_ = true;
+  //   this->current_state_ = Interface::current_state_t{1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
+  //   return;
+  // }
 
-  void desiredIsValid()
-  {
-    if (desired_state_valid_ == true)
-    {
-      std::cout << "Desired State is Valid\n"; 
-    }
-  }
+  // bool currentInitValid()
+  // {
+  //   while (!curr_state_valid_)
+  //   {
+  //     sleep(.1);
+  //   }
+  //   return true;
+  // }
 
-  void initCurrentState()
-  {
-    sleep(5);
-    curr_state_valid_ = true;
-    this->current_state_ = Interface::current_state_t{1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
-    return;
-  }
+  // void initDesiredState(Interface::desired_state_t& desired_state)
+  // {
+  //   auto func = std::bind(&Controller::currentInitValid, this);
+  //   std::future<bool> fut = std::async(func);
 
-  bool currentInitValid()
-  {
-    while (!curr_state_valid_)
-    {
-      sleep(.1);
-    }
-    return true;
-  }
+  //   std::cout << "Waiting for Valid Sensor Info.\n";
 
-  void initDesiredState(Interface::desired_state_t& desired_state)
-  {
-    auto func = std::bind(&Controller::currentInitValid, this);
-    std::future<bool> fut = std::async(func);
+  //   bool valid = fut.get();      // waits for currentInitValid to return
 
-    std::cout << "Waiting for Valid Sensor Info.\n";
+  //   if (valid)
+  //   {
+  //     desired_state = this->current_state_;
+  //   } 
 
-    bool valid = fut.get();      // waits for currentInitValid to return
+  //   std::stringstream ss;
+  //   for (float element : desired_state)
+  //   {
+  //     ss << element << " ";
+  //   }
 
-    if (valid)
-    {
-      desired_state = this->current_state_;
-    } 
-
-    std::stringstream ss;
-    for (float element : desired_state)
-    {
-      ss << element << " ";
-    }
-
-    RCLCPP_INFO(this->get_logger(), ss.str().c_str());
-  }
+  //   RCLCPP_INFO(this->get_logger(), ss.str().c_str());
+  // }
 
   rclcpp_action::GoalResponse handle_goal
   (
@@ -216,7 +197,7 @@ private:
       }
       // Publish feedback
       goal_handle->publish_feedback(feedback);
-      RCLCPP_INFO(this->get_logger(), "Publish feedback");
+      // RCLCPP_INFO(this->get_logger(), "Publish feedback");
 
       loop_rate.sleep();
 

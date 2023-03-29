@@ -1,27 +1,41 @@
 #include <vector>
 #include <iostream>
+#include <deque>
 #include <unordered_map>
+#include <cmath>
 #include "rclcpp/rclcpp.hpp"
 #include "robot_types/msg/idea.hpp"
 
+#define PI 3.14159265
+
 namespace Interface
 {
-    typedef std::vector<float> current_state_t;
-    typedef std::vector<float> desired_state_t;
-    typedef desired_state_t (*state_transform_func)(float, current_state_t&);
-    typedef desired_state_t (*simple_movement_func)();
-    typedef robot_types::msg::Idea idea_message_t;
-    typedef std::vector<robot_types::msg::Idea> idea_vector_t;
-    typedef std::vector<Command> command_vector_t;
-    typedef std::unordered_map<int, std::string> ModeMap;
+    union Function;      
+    union Params; 
+    struct Command;
 
+    /* Custom Types to Use In Control System */
+    typedef std::vector<float>                              current_state_t;
+    typedef std::vector<float>                              desired_state_t;
+    typedef robot_types::msg::Idea                          idea_message_t;
+    typedef std::deque<Command>                             command_queue_t;
+    typedef std::vector<robot_types::msg::Idea>             idea_vector_t;
+    typedef std::vector<Command>                            command_vector_t;
+    typedef std::unordered_map<int, std::string>            ModeMap;
+
+    /* Function Pointers That Point to Different Commands for Robot */
+    typedef desired_state_t (*state_transform_func)(float); //, current_state_t&
+    typedef desired_state_t (*simple_movement_func)();
+
+    /* Brain will Send Ideas to the Mediator Which will Translate Into Commands For the PID Controller */
     enum Idea
     {
         STOP = 0,
         GO = 1,
         SPIN = 2,
         MOVE = 3,
-        YAW = 4,
+        TURN = 4,
+        // YAW = 4,
         // PITCH = 5,
         // ROLL = 6,
         RELATIVE_POINT = 7,
@@ -30,6 +44,11 @@ namespace Interface
         PURE_ABSOLUTE_POINT = 10
     };
 
+    /*
+     * Function Pointers May Point to Functions with Different Arguments. To not Have to Make Different
+     * Structs Based on this, we can use a union and pick the signature that specific command will require
+     * All function pointers conveniently have the same size so it will be perfect in the union.
+     */
     union Function
     {
         simple_movement_func movement;
@@ -39,18 +58,19 @@ namespace Interface
     union Params
     {
         float degree;
-        std::vector<float> list;
+        // std::vector<float> list;
         void* nothing = nullptr;
     }; 
 
     struct Command
     {
-        Function function;          // Points to a function to execute          (turn)
-        float degree;               // The magnitude to pass into that function (30 degrees)
+        Function function;           // Points to a function to execute          (turn)
+        Params params;               // The magnitude to pass into that function (30 degrees)
     };
 }
 
-namespace Command
+/* Defines Possible Commands to Be Given to the PID Controller */
+namespace Movements
 {
     using namespace Interface;
 
@@ -75,24 +95,141 @@ namespace Command
     desired_state_t go(float seconds)
     {
         std::cout << "Move" << std::endl;
-        return desired_state_t{0,0,0,0,0,0};
+        return desired_state_t{10,10,10,10,10,10};
     }
 
-    desired_state_t turn(float degree, current_state_t& current_state)
+    desired_state_t turn(float degree)
     {
         std::cout << "Turn" << degree << std::endl;
-        return desired_state_t{0,0,0,0,0,0};
+        return desired_state_t{20,20,20,20,20,20};
     }
 
-    desired_state_t move(float degree, current_state_t& current_state)
+    desired_state_t move(float degree)
     {
         std::cout << "Move" << degree << std::endl;
-        return desired_state_t{0,0,0,0,0,0};
+        return desired_state_t{30,30,30,30,30,30};
     }
 
     desired_state_t count()
     {
-        return desired_state_t{80.0F, 80.0F, 80.0F, 80.0F, 80.0F, 80.0F};
+        return desired_state_t{80, 80, 80, 80, 80, 80};
+    }
+}
+
+/* All Translator Functions take an idea and translate it into a series of commands to add to mediator queue */
+namespace Translator
+{
+    using namespace Interface;
+    
+    command_vector_t stop()
+    {
+        std::cout << "Stop" << std::endl;
+        return command_vector_t{};
     }
 
+    command_vector_t spin(float seconds)
+    {
+        std::cout << "Turn" << std::endl;
+        return command_vector_t{};
+    }
+
+    command_vector_t pitch(float degree)
+    {
+        std::cout << "Pitch" << std::endl;
+        return command_vector_t{};
+    }
+
+    command_vector_t go(float seconds)
+    {
+        std::cout << "Move" << std::endl;
+        return command_vector_t{};
+    }
+
+    command_vector_t turn(float degree)
+    {
+        std::cout << "Turn" << degree << std::endl;
+        return command_vector_t{};
+    }
+
+    command_vector_t move(float degree)
+    {
+        std::cout << "Move" << degree << std::endl;
+        return command_vector_t{};
+    }
+
+    command_vector_t count()
+    {
+        return command_vector_t{};
+    }
+
+    command_vector_t relativePoint(float x, float y)
+    {
+        float point_angle_radians = atan(y / x);
+        float point_angle_degrees = point_angle_radians * (180/PI);
+        float point_distance_meters = sqrt(pow(x,2) + pow(y,2));
+
+        Interface::Command command1;
+        command1.function.transform = &Movements::turn;
+        command1.params.degree = point_angle_degrees;
+
+        Interface::Command command2;
+        command2.function.transform = &Movements::move;
+        command2.params.degree = point_distance_meters;
+
+        // command_vector_t command_vector;
+        // command_vector.push_back(command1);
+        // command_vector.push_back(command2);
+        return command_vector_t{command1, command2};
+    }
+
+    command_vector_t absolutePoint(float x, float y)
+    {
+        float point_angle_radians = atan(y / x);
+        float point_angle_degrees = point_angle_radians * (180/PI);
+        float point_distance_meters = sqrt(pow(x,2) + pow(y,2));
+
+        Interface::Command command1;
+        command1.function.transform = &Movements::turn;
+        command1.params.degree = point_angle_degrees;
+
+        Interface::Command command2;
+        command2.function.transform = &Movements::move;
+        command2.params.degree = point_distance_meters;
+
+        return command_vector_t{command1, command2};
+    }
+
+    command_vector_t pureRelativePoint(float x, float y)
+    {
+        float point_angle_radians = atan(y / x);
+        float point_angle_degrees = point_angle_radians * (180/PI);
+        float point_distance_meters = sqrt(pow(x,2) + pow(y,2));
+
+        Interface::Command command1;
+        command1.function.transform = &Movements::turn;
+        command1.params.degree = point_angle_degrees;
+
+        Interface::Command command2;
+        command2.function.transform = &Movements::move;
+        command2.params.degree = point_distance_meters;
+
+        return command_vector_t{command1, command2};
+    }
+
+    command_vector_t pureAbsolutePoint(float x, float y)
+    {
+        float point_angle_radians = atan(y / x);
+        float point_angle_degrees = point_angle_radians * (180/PI);
+        float point_distance_meters = sqrt(pow(x,2) + pow(y,2));
+
+        Interface::Command command1;
+        command1.function.transform = &Movements::turn;
+        command1.params.degree = point_angle_degrees;
+
+        Interface::Command command2;
+        command2.function.transform = &Movements::move;
+        command2.params.degree = point_distance_meters;
+
+        return command_vector_t{command1, command2};
+    }
 }

@@ -9,6 +9,7 @@
 #include <deque>
 
 #include "robot_types/action/pid.hpp"
+#include "robot_types/msg/idea.hpp"
 #include "control_interface.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
@@ -16,6 +17,7 @@
 
 using PIDAction = robot_types::action::PID;
 using GoalHandlePIDAction = rclcpp_action::ClientGoalHandle<PIDAction>;
+using namespace std::placeholders;
 
 class Mediator : public rclcpp::Node
 {
@@ -33,11 +35,12 @@ public:
     (
       "brain_idea_data",
        10,
-       std::bind(&Controller::translateIdea, this, _1)
+       std::bind(&Mediator::translateIdea, this, _1)
     );
 
-    this->populateQueue();
+    // this->populateQueue();
     current_command_ = nullptr;
+
     this->timer_ = this->create_wall_timer
     (
       std::chrono::milliseconds(100), 
@@ -46,22 +49,41 @@ public:
 
   }
 
+  void addToQueue(Interface::command_vector_t& command_vector)
+  {
+    for (Interface::Command command : command_vector)
+    {
+      this->command_queue_.push_back(command);
+    }
+  }
 
   void translateIdea(robot_types::msg::Idea::SharedPtr idea)
     {
       using namespace Interface;
+      Interface::command_vector_t command_vector;
       switch (idea->code)
       {
         case Idea::STOP:
-          Interface::stop();
+          Translator::stop();
         case Idea::GO:
-          Interface::go(idea->parameters[0]);
+          Translator::go(idea->parameters[0]);
+        case Idea::SPIN:
+          Translator::spin(idea->parameters[0]);
         case Idea::MOVE:
-
+          Translator::move(idea->parameters[0]);
+        case Idea::TURN:
+          Translator::turn(idea->parameters[0]);
+        case Idea::RELATIVE_POINT:
+          command_vector = Translator::relativePoint(idea->parameters[0], idea->parameters[1]);
+          addToQueue(command_vector);
+        case Idea::ABSOLUTE_POINT:
+          Translator::absolutePoint(idea->parameters[0], idea->parameters[1]);
+        case Idea::PURE_RELATIVE_POINT:
+          Translator::pureRelativePoint(idea->parameters[0], idea->parameters[1]);
+        case Idea::PURE_ABSOLUTE_POINT:
+          Translator::pureAbsolutePoint(idea->parameters[0], idea->parameters[1]);
       }
     }
-
-
 
   void send_goal(Interface::desired_state_t& desired)
   {
@@ -94,9 +116,7 @@ private:
   rclcpp_action::Client<PIDAction>::SharedPtr client_ptr_;
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::Subscription<robot_types::msg::Idea>::SharedPtr idea_sub_;
-
-  // rclcpp::TimerBase::SharedPtr cancel_timer_;
-  std::deque<Interface::Command> command_queue_;
+  Interface::command_queue_t command_queue_;
   Interface::Command* current_command_; 
 
   void goal_response_callback
@@ -164,8 +184,8 @@ private:
       this->current_command_ = &command_queue_[0];
       this->command_queue_.pop_front();
       
-      simple_movement_func func = current_command_->function.movement;
-      desired_state_t desired = (*func)();
+      state_transform_func func = current_command_->function.transform;
+      desired_state_t desired = (*func)(current_command_->params.degree);
       this->send_goal(desired);
     }
   }
@@ -174,11 +194,11 @@ private:
   {
     using namespace Interface;
     Command command1;
-    command1.function.movement = &count;
+    command1.function.movement = &Movements::count;
     Command command2;
-    command2.function.movement = &count;
+    command2.function.movement = &Movements::count;
     Command command3;
-    command3.function.movement = &count;
+    command3.function.movement = &Movements::count;
 
     this->command_queue_.push_back(command1);
     this->command_queue_.push_back(command2);

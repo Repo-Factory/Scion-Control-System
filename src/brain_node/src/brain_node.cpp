@@ -34,7 +34,6 @@ class Brain : public rclcpp::Node
             }
         }
     private:
-        
         rclcpp::Publisher<robot_types::msg::Idea>::SharedPtr idea_pub_;
         rclcpp::TimerBase::SharedPtr decision_timer_;
         Interface::idea_vector_t idea_sequence_;
@@ -68,7 +67,6 @@ class Brain : public rclcpp::Node
                 this->idea_pub_->publish(idea_message);
             }
             RCLCPP_INFO(this->get_logger(), "Publishing Idea" );
-
         }
 
 }; // class Brain
