@@ -46,7 +46,6 @@ public:
       std::chrono::milliseconds(100), 
       std::bind(&Mediator::nextCommand, this)
     );
-
   }
 
   void addToQueue(Interface::command_vector_t& command_vector)
@@ -65,32 +64,32 @@ public:
       {
         case Idea::STOP:
           Translator::stop();
-          // break;
+          break;
         case Idea::GO:
           Translator::go(idea->parameters[0]);
-          // break;
+          break;
         case Idea::SPIN:
           Translator::spin(idea->parameters[0]);
-          // break;
+          break;
         case Idea::MOVE:
           Translator::move(idea->parameters[0]);
-          // break;
+          break;
         case Idea::TURN:
           Translator::turn(idea->parameters[0]);
-          // break;
+          break;
         case Idea::RELATIVE_POINT:
           command_vector = Translator::relativePoint(idea->parameters[0], idea->parameters[1]);
           addToQueue(command_vector);
-          // break;
+          break;
         case Idea::ABSOLUTE_POINT:
           Translator::absolutePoint(idea->parameters[0], idea->parameters[1]);
-          // break;
+          break;
         case Idea::PURE_RELATIVE_POINT:
           Translator::pureRelativePoint(idea->parameters[0], idea->parameters[1]);
-          // break;
+          break;
         case Idea::PURE_ABSOLUTE_POINT:
           Translator::pureAbsolutePoint(idea->parameters[0], idea->parameters[1]);
-          // break;
+          break;
       }
     }
 

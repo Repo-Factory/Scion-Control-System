@@ -76,37 +76,37 @@ namespace Movements
 
     desired_state_t stop()
     {
-        std::cout << "Stop" << std::endl;
+        std::cout << "Stop " << std::endl;
         return desired_state_t{0,0,0,0,0,0};
     }
 
     desired_state_t spin(float seconds)
     {
-        std::cout << "Turn" << std::endl;
+        std::cout << "Turn " << std::endl;
         return desired_state_t{0,0,0,0,0,0};
     }
 
     desired_state_t pitch(float degree)
     {
-        std::cout << "Pitch" << std::endl;
+        std::cout << "Pitch " << std::endl;
         return desired_state_t{0,0,0,0,0,0};
     }
 
     desired_state_t go(float seconds)
     {
-        std::cout << "Move" << std::endl;
+        std::cout << "Move " << std::endl;
         return desired_state_t{10,10,10,10,10,10};
     }
 
     desired_state_t turn(float degree)
     {
-        std::cout << "Turn" << degree << std::endl;
+        std::cout << "Turn " << degree << std::endl;
         return desired_state_t{20,20,20,20,20,20};
     }
 
     desired_state_t move(float degree)
     {
-        std::cout << "Move" << degree << std::endl;
+        std::cout << "Move " << degree << std::endl;
         return desired_state_t{30,30,30,30,30,30};
     }
 
@@ -176,9 +176,6 @@ namespace Translator
         command2.function.transform = &Movements::move;
         command2.params.degree = point_distance_meters;
 
-        // command_vector_t command_vector;
-        // command_vector.push_back(command1);
-        // command_vector.push_back(command2);
         return command_vector_t{command1, command2};
     }
 

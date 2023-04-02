@@ -63,17 +63,17 @@ class Brain : public rclcpp::Node
         void publishSequence(Interface::idea_vector_t& idea_sequence)
         {   
             using namespace Interface;
+            // for (idea_message_t& idea_message : idea_sequence)
+            // {
+            //     std::cout << idea_message.code << std::endl;
+            //     for (float parameter : idea_message.parameters)
+            //     {
+            //         std::cout << parameter << std::endl;
+            //     } 
+            // }
             for (idea_message_t& idea_message : idea_sequence)
             {
-                std::cout << idea_message.code << std::endl;
-                for (float parameter : idea_message.parameters)
-                {
-                    std::cout << parameter << std::endl;
-                } 
-            }
-            for (idea_message_t& idea_message : idea_sequence)
-            {
-                sleep(.1);
+                sleep(1);
                 this->idea_pub_->publish(idea_message);
             }
             RCLCPP_INFO(this->get_logger(), "Publishing Idea" );
